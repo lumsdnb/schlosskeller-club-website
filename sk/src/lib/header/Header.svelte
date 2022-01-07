@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
+	import logo from './sk-logo.svg';
 </script>
 
 <header>
@@ -20,7 +20,7 @@
 				<a sveltekit:prefetch href="/about">About</a>
 			</li>
 			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">Todos</a>
+				<a sveltekit:prefetch href="/todos">switch language here?</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">

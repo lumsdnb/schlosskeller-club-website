@@ -19,12 +19,11 @@
 			</picture>
 		</div>
 	</h1>
-	<p>enter the partyverse</p>
-	<Countdown />
 </section>
 
 <section class="fullpanel">
 	<p>enter the partyverse</p>
+	<Countdown />
 </section>
 
 <section>
@@ -35,13 +34,31 @@
 	<p>Wir freuen uns, euch jetzt wieder virtuell in den Keller einzuladen</p>
 </section>
 
+<section>
+	<h2>WIE NEHME ICH TEIL?</h2>
+	<ol>
+		<li>VRChat auf Steam installieren und einen VRChat Account erstellen</li>
+		<li>Schlosskeller User als Freund hinzufuegen</li>
+		<li>Am Tag des Events VRChat oeffnen und auf einen EInladungslink warten</li>
+	</ol>
+</section>
+
+<section>
+	<h3>bis bald</h3>
+</section>
+
 <style>
 	section {
 		width: 100vw;
 		height: 95vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		font-size: 2rem;
 	}
-	section:nth-child(odd) {
-		background-color: rgb(204, 204, 204);
+	section:nth-child(even) {
+		background-color: rgb(53, 53, 53);
 	}
 
 	h1 {

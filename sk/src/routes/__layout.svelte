@@ -10,8 +10,7 @@
 </main>
 
 <footer>
-	<div class="max-w-4xl mx-auto py-8">hi fren</div>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<div class="max-w-4xl mx-auto py-8">footer <a href="testlink">link</a></div>
 </footer>
 
 <style>
@@ -32,6 +31,8 @@
 		justify-content: center;
 		align-items: center;
 		padding: 40px;
+		background-color: gray;
+		color: white;
 	}
 
 	footer a {

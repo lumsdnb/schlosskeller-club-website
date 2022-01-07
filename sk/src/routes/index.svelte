@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import Counter from '$lib/Counter.svelte';
+	import Countdown from '$lib/Countdown.svelte';
 </script>
 
 <svelte:head>
@@ -18,24 +18,30 @@
 				<img src="svelte-welcome.png" alt="Welcome" />
 			</picture>
 		</div>
-
-		to your new<br />SvelteKit app
 	</h1>
+	<p>enter the partyverse</p>
+	<Countdown />
+</section>
 
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
+<section class="fullpanel">
+	<p>enter the partyverse</p>
+</section>
 
-	<Counter />
+<section>
+	<p>
+		Seit einiger Zeit ist der Schlosskeller geschlossen, und Streams haben uns nach ner Weile
+		gelangweilt.
+	</p>
+	<p>Wir freuen uns, euch jetzt wieder virtuell in den Keller einzuladen</p>
 </section>
 
 <style>
 	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
+		width: 100vw;
+		height: 95vh;
+	}
+	section:nth-child(odd) {
+		background-color: rgb(204, 204, 204);
 	}
 
 	h1 {

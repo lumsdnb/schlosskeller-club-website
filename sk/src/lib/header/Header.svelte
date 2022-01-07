@@ -37,6 +37,7 @@
 	header {
 		display: flex;
 		justify-content: space-between;
+		height: 5vh;
 	}
 
 	.corner {

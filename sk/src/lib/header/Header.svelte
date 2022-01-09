@@ -11,21 +11,12 @@
 	</div>
 
 	<nav>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L1,2 C1.5,3 1.5,3 2,3 L2,0 Z" />
-		</svg>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
 			<li class:active={$page.url.pathname === '/about'}>
 				<a sveltekit:prefetch href="/about">About</a>
 			</li>
-			<li class:active={$page.url.pathname === '/todos'}>
-				<a sveltekit:prefetch href="/todos">switch language here?</a>
-			</li>
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
-			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
 	</nav>
 
 	<div class="corner">
@@ -41,8 +32,11 @@
 	}
 
 	.corner {
-		width: 3em;
-		height: 3em;
+		width: 9em;
+		height: 6em;
+		position: relative;
+		left: 1em;
+		top: .2em;
 	}
 
 	.corner a {
@@ -53,11 +47,11 @@
 		height: 100%;
 	}
 
-	.corner img {
+	/* .corner img {
 		width: 2em;
 		height: 2em;
 		object-fit: contain;
-	}
+	} */
 
 	nav {
 		display: flex;
@@ -66,8 +60,8 @@
 	}
 
 	svg {
-		width: 2em;
-		height: 3em;
+		width: 9em;
+		height: 7em;
 		display: block;
 	}
 

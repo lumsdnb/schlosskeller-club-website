@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import logo from './sk-logo.svg';
+
 </script>
+
 
 <header>
 	<div class="corner">
@@ -13,8 +15,10 @@
 	<nav>
 		<ul>
 			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
-			<li class:active={$page.url.pathname === '/about'}>
-				<a sveltekit:prefetch href="/about">About</a>
+			<li><a href="#mitmachen">Mitmachen</a></li>
+			<li><a href="#regeln">Regeln</a></li>
+			<li>
+				<a sveltekit:prefetch href="/about">DE/EN</a>
 			</li>
 		</ul>
 	</nav>
@@ -29,6 +33,9 @@
 		display: flex;
 		justify-content: space-between;
 		height: 5vh;
+		position:fixed;
+    	top:0;
+		width: 100%;
 	}
 
 	.corner {

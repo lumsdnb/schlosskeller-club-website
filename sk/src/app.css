@@ -1,7 +1,7 @@
 @import '@fontsource/fira-mono';
 @font-face {
 	font-family: 'Rubik Mono One';
-	src: url('/static/RubikMonoOne-Regular.ttf') format('ttf');
+	src: url('RubikMonoOne-Regular.ttf') format('ttf');
 }
 
 @tailwind base;
@@ -26,8 +26,8 @@
 	--secondary-color: #4db8c0;
 	--tertiary-color: #987b99;
 	--accent-color: #71bfec;
-	--heading-color: rgba(0, 0, 0, 0.7);
-	--text-color: #444444;
+	--heading-color: rgba(255, 255, 255, 0.7);
+	--text-color: #ffffff;
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
 }
@@ -68,10 +68,18 @@ body::before {
 }
 
 h1,
-h2,
+h2 {
+	font-weight: 800;
+	font-size: 2rem;
+	color: var(--text-color);
+	text-transform: uppercase;
+	font-family: Rubik Mono One;
+}
+
 p {
-	font-weight: 400;
-	color: var(--heading-color);
+	font-weight: 500;
+	color: var(--text-color);
+	font-size: 1.4rem;
 }
 
 p {

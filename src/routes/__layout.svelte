@@ -3,8 +3,7 @@
 	import { slide, fly } from 'svelte/transition';
 	import '../app.css';
 	let y;
-	$: console.log(y)
-
+	$: console.log(y);
 </script>
 
 <svelte:head>
@@ -13,11 +12,10 @@
 
 <svelte:window bind:scrollY={y} />
 
-{#if y>1000}
-	
-<div transition:fly>
-	<Header />
-</div>
+{#if y > 1000}
+	<div transition:fly>
+		<Header />
+	</div>
 {/if}
 
 <main>
@@ -25,7 +23,9 @@
 </main>
 
 <footer>
-	<div class="max-w-4xl mx-auto py-8">footer <a href="testlink">link</a></div>
+	<div class="max-w-4xl mx-auto py-8">
+		footer <a href="https://www.schlosskeller-darmstadt.de/">link</a>
+	</div>
 </footer>
 
 <style>

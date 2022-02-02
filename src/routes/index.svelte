@@ -32,7 +32,7 @@
 		Cluberfahrung bieten.
 	</p>
 	<p>
-		Heute freuen wir uns, als erster digitalisierter Club Darmstadts mit euch zusammen zu feiern.
+		Heute freuen wir uns, als erster komplett virtueller Veranstaltungsraum Darmstadts zum ersten Mal die Türen ins Kellergewölbe zu öffnen.
 	</p>
 </section>
 

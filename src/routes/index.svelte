@@ -1,12 +1,13 @@
 <script context="module" lang="ts">
 	export const prerender = true;
+	import { language } from '../stores';
 </script>
 
 <svelte:head>
 	<title>schlosskeller.club</title>
 </svelte:head>
 
-<section>
+<section id="schlosskellerplus">
 	<h1>
 		SEITE IST NOCH NICHT FERTIG PLS NOCH NICHT MIT LEUTEN TEILEN DANKE LG
 		<div class="welcome">
@@ -26,13 +27,19 @@
 </section>
 
 <section>
-	<p>Aus unbekannten Gründen hat der Schlosskeller immer noch zu.</p>
+	<p>
+		{$language.englishSelected
+			? 'Aus unbekannten Gründen hat der Schlosskeller immer noch zu.'
+			: ''}
+	</p>
+
 	<p>
 		Wir haben Anfang 2020 mit Live Streams experimentiert, konnten damit aber nie die gleiche
 		Cluberfahrung bieten.
 	</p>
 	<p>
-		Heute freuen wir uns, als erster komplett virtueller Veranstaltungsraum Darmstadts zum ersten Mal die Türen ins Kellergewölbe zu öffnen.
+		Heute freuen wir uns, als erster komplett virtueller Veranstaltungsraum Darmstadts zum ersten
+		Mal die Türen ins Kellergewölbe zu öffnen.
 	</p>
 </section>
 

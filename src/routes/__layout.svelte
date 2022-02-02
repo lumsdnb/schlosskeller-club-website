@@ -2,8 +2,9 @@
 	import Header from '$lib/header/Header.svelte';
 	import { slide, fly } from 'svelte/transition';
 	import '../app.css';
+
 	let y;
-	$: console.log(y);
+	//$: console.log(y);
 </script>
 
 <svelte:head>

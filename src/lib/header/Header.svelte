@@ -1,30 +1,30 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import logo from './sk-logo.svg';
-
+	import LanguageSelector from '$lib/LanguageSelector.svelte';
+	export let englishSelected = false;
 </script>
-
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+		<a href="/">
+			<img src={logo} alt="Schlosskeller+" />
 		</a>
 	</div>
 
 	<nav>
 		<ul>
-			<li class:active={$page.url.pathname === '/'}><a sveltekit:prefetch href="/">Home</a></li>
+			<li>
+				<a href="#schlosskellerplus">Schlosskeller+</a>
+			</li>
 			<li><a href="#mitmachen">Mitmachen</a></li>
 			<li><a href="#regeln">Regeln</a></li>
-			<li>
-				<a sveltekit:prefetch href="/about">DE/EN</a>
-			</li>
+			<li><a href="#faq">FAQ</a></li>
 		</ul>
 	</nav>
 
 	<div class="corner">
-		<!-- TODO put something else here? github link? -->
+		<LanguageSelector />
 	</div>
 </header>
 
@@ -33,9 +33,11 @@
 		display: flex;
 		justify-content: space-between;
 		height: 5vh;
-		position:fixed;
-    	top:0;
+		position: fixed;
+		top: 0;
 		width: 100%;
+		z-index: 1;
+		background-color: black;
 	}
 
 	.corner {
@@ -43,7 +45,7 @@
 		height: 6em;
 		position: relative;
 		left: 1em;
-		top: .2em;
+		top: 0.2em;
 	}
 
 	.corner a {
@@ -63,17 +65,7 @@
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
-	}
-
-	svg {
-		width: 9em;
-		height: 7em;
-		display: block;
-	}
-
-	path {
-		fill: var(--background);
+		--background: rgba(10, 10, 10, 0.7);
 	}
 
 	ul {
@@ -92,18 +84,9 @@
 	li {
 		position: relative;
 		height: 100%;
-	}
-
-	li.active::before {
-		--size: 6px;
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: 0;
-		left: calc(50% - var(--size));
-		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--accent-color);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	nav a {

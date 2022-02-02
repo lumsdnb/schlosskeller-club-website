@@ -11,10 +11,6 @@
 	<h1>
 		SEITE IST NOCH NICHT FERTIG PLS NOCH NICHT MIT LEUTEN TEILEN DANKE LG
 		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
 			Lineup
 			<ul>
 				<li>Chris (Impuls)</li>

@@ -24,12 +24,12 @@
 		color: white;
 		font-family: Rubik Mono One;
 		width: fit-content;
+		user-select: none;
 	}
 	span {
 		display: inline-block;
 		margin: 0rem;
 		padding: 0.2rem 0.4rem;
 		text-align: center;
-		user-select: none;
 	}
 </style>

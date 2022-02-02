@@ -23,8 +23,15 @@
 </main>
 
 <footer>
-	<div class="max-w-4xl mx-auto py-8">
-		footer <a href="https://www.schlosskeller-darmstadt.de/">link</a>
+	<div>
+		<span>Poster Gestaltung: <a href="https://www.instagram.com/marianofdeath666">Marian</a></span>
+		<br />
+		<span>3D & Web Entwicklung: <a href="https://lums.io">Jeremy</a></span> <br />
+		<span
+			>&copy; 2022 <a href="https://www.schlosskeller-darmstadt.de/">
+				Schlosskeller Darmstadt</a
+			></span
+		>
 	</div>
 </footer>
 
@@ -40,6 +47,7 @@
 	}
 
 	footer {
+		font-family: 'Rubik Mono One';
 		display: flex;
 		flex-direction: column;
 		justify-content: center;

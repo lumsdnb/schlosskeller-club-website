@@ -30,6 +30,7 @@
 body {
 	font-family: 'Space Grotesk';
 	min-height: 100vh;
+	font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 	margin: 0;
 	background-color: var(--primary-color);
 	background: linear-gradient(
@@ -74,7 +75,6 @@ h3 {
 p {
 	font-weight: 500;
 	color: var(--text-color);
-	font-size: 1.4rem;
 }
 
 p {
@@ -90,26 +90,6 @@ a:hover {
 	text-decoration: underline;
 }
 
-h1 {
-	font-size: 2rem;
-	text-align: center;
-}
-
-h2 {
-	font-size: 1rem;
-}
-
-pre {
-	font-size: 16px;
-	font-family: var(--font-mono);
-	background-color: rgba(255, 255, 255, 0.45);
-	border-radius: 3px;
-	box-shadow: 2px 2px 6px rgb(255 255 255 / 25%);
-	padding: 0.5em;
-	overflow-x: auto;
-	color: var(--text-color);
-}
-
 input,
 button {
 	font-size: inherit;
@@ -118,10 +98,4 @@ button {
 
 button:focus:not(:focus-visible) {
 	outline: none;
-}
-
-@media (min-width: 720px) {
-	h1 {
-		font-size: 2.4rem;
-	}
 }

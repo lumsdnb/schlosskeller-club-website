@@ -254,6 +254,7 @@
 	}
 	.button-container > div:hover {
 		transform: scale(1.05);
+		transition: all 70ms ease-in-out;
 	}
 
 	.welcome {

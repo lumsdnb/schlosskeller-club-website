@@ -7,7 +7,7 @@
 	}
 </script>
 
-<div class="bg-black-400 border-4 rounded" on:click={() => toggleLanguage()}>
+<div on:click={() => toggleLanguage()}>
 	{#if $language.englishSelected == false}
 		<span class="bg-white text-black">DE</span>
 		<span class="bg-black text-white">EN</span>
@@ -23,13 +23,18 @@
 	div {
 		color: white;
 		font-family: Rubik Mono One;
-		width: fit-content;
+		width: 100%;
+		height: 50%;
 		user-select: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 0;
+		margin: 0;
 	}
 	span {
-		display: inline-block;
-		margin: 0rem;
-		padding: 0.2rem 0.4rem;
+		/* padding: 0.2rem 0.4rem; */
 		text-align: center;
+		font-size: 1rem;
 	}
 </style>

@@ -1,51 +1,61 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from './sk-logo.svg';
+	import logo from '$lib/header/sk-logo.svg';
 	import LanguageSelector from '$lib/LanguageSelector.svelte';
-	export let englishSelected = false;
 </script>
 
 <header>
 	<div class="corner">
-		<a href="/">
-			<img src={logo} alt="Schlosskeller+" />
+		<a href="#top">
+			<!-- <img src={logo} alt="Schlosskeller+" /> -->
+			<img src="/logo.png" id="header-image" alt="" srcset="" />
 		</a>
 	</div>
 
 	<nav>
-		<ul>
+		<ul class="flex">
 			<li>
-				<a href="#schlosskellerplus">Schlosskeller+</a>
+				<!-- <a href="#schlosskellerplus">Schlosskeller+</a> -->
 			</li>
 			<li><a href="#mitmachen">Mitmachen</a></li>
-			<li><a href="#regeln">Regeln</a></li>
 			<li><a href="#faq">FAQ</a></li>
 		</ul>
+		<div class="langsel">
+			<LanguageSelector />
+		</div>
 	</nav>
-
-	<div class="corner">
-		<LanguageSelector />
-	</div>
 </header>
 
 <style>
+	.langsel {
+		height: fit-content;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 1rem;
+		border: 1px solid white;
+	}
 	header {
 		display: flex;
 		justify-content: space-between;
-		height: 5vh;
+		height: 6vh;
+		min-height: 4rem;
 		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 1;
-		background-color: black;
+		background: rgb(2, 0, 36);
+		background: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.9) 0%,
+			rgba(0, 0, 0, 0.9) 61%,
+			rgba(0, 0, 0, 0) 100%
+		);
+		overflow: hidden;
 	}
 
 	.corner {
 		width: 9em;
-		height: 6em;
-		position: relative;
-		left: 1em;
-		top: 0.2em;
 	}
 
 	.corner a {
@@ -65,28 +75,18 @@
 	nav {
 		display: flex;
 		justify-content: center;
-		--background: rgba(10, 10, 10, 0.7);
 	}
 
 	ul {
 		position: relative;
 		padding: 0;
 		margin: 0;
-		height: 3em;
-		display: flex;
+		height: 100%;
 		justify-content: center;
 		align-items: center;
 		list-style: none;
 		background: var(--background);
 		background-size: contain;
-	}
-
-	li {
-		position: relative;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 	}
 
 	nav a {
@@ -105,5 +105,12 @@
 
 	a:hover {
 		color: var(--accent-color);
+	}
+
+	#header-image {
+		height: auto;
+		width: auto;
+		float: left;
+		object-fit: cover;
 	}
 </style>

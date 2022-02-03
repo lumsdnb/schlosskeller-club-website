@@ -2,8 +2,9 @@
 	import Header from '$lib/header/Header.svelte';
 	import { slide, fly } from 'svelte/transition';
 	import '../app.css';
-
+	import { language } from '../stores';
 	let y;
+
 	//$: console.log(y);
 </script>
 
@@ -11,13 +12,13 @@
 	<title>schlosskeller.club</title>
 </svelte:head>
 
-<svelte:window bind:scrollY={y} />
+<!-- <svelte:window bind:scrollY={y} /> -->
 
-{#if y > 1000}
-	<div transition:fly>
-		<Header />
-	</div>
-{/if}
+<!-- {#if y > 500} -->
+<div transition:fly>
+	<Header />
+</div>
+<!-- {/if} -->
 
 <main>
 	<slot />
@@ -25,9 +26,16 @@
 
 <footer>
 	<div>
-		<span>Poster Gestaltung: <a href="https://www.instagram.com/marianofdeath666">Marian</a></span>
+		<span>
+			{$language.englishSelected ? 'Poster design:' : 'Poster Gestaltung:'}
+
+			<a href="https://www.instagram.com/marianofdeath666">Marian</a></span
+		>
 		<br />
-		<span>3D & Web Entwicklung: <a href="https://lums.io">Jeremy</a></span> <br />
+		<span>
+			{$language.englishSelected ? '3D & Web development:' : '3D & Web Entwicklung:'}
+			<a href="https://lums.io">Jeremy</a></span
+		> <br />
 		<span
 			>&copy; 2022 <a href="https://www.schlosskeller-darmstadt.de/">
 				Schlosskeller Darmstadt</a
@@ -56,6 +64,7 @@
 		padding: 40px;
 		background-color: black;
 		color: white;
+		font-size: 1rem;
 	}
 
 	footer a {

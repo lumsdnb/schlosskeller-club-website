@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import logo from '$lib/header/sk-logo.svg';
 	import LanguageSelector from '$lib/LanguageSelector.svelte';
+	import { language } from '../../stores';
 </script>
 
 <header>
@@ -17,7 +18,11 @@
 			<li>
 				<!-- <a href="#schlosskellerplus">Schlosskeller+</a> -->
 			</li>
-			<li><a href="#mitmachen">Mitmachen</a></li>
+			<li>
+				<a href="#mitmachen">
+					{$language.englishSelected ? 'Join us' : 'Mitmachen'}
+				</a>
+			</li>
 			<li><a href="#faq">FAQ</a></li>
 		</ul>
 		<div class="langsel">

@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-	<title>schlosskeller.club</title>
+	<title>Schlosskeller+</title>
 </svelte:head>
 
 <section id="schlosskellerplus">
@@ -23,97 +23,139 @@
 </section>
 
 <section>
-	<p>
-		{$language.englishSelected
-			? 'Aus unbekannten Gründen hat der Schlosskeller immer noch zu.'
-			: ''}
-	</p>
+	<div class="slide-content flex flex-col lg:flex-row">
+		<p class="m-5">
+			{$language.englishSelected
+				? 'Due to unknown reasons, Schlosskeller is still closed.'
+				: 'Aus unbekannten Gründen hat der Schlosskeller immer noch zu.'}
+		</p>
 
-	<p>
-		Wir haben Anfang 2020 mit Live Streams experimentiert, konnten damit aber nie die gleiche
-		Cluberfahrung bieten.
-	</p>
-	<p>
-		Heute freuen wir uns, als erster komplett virtueller Veranstaltungsraum Darmstadts zum ersten
-		Mal die Türen ins Kellergewölbe zu öffnen.
-	</p>
+		<p class="m-5">
+			{$language.englishSelected
+				? 'In 2020 we experimented with live streams, but could never achieve a level of immersion comparable with a real club experience.'
+				: 'Wir haben Anfang 2020 mit Live Streams experimentiert, konnten damit aber nie die gleiche Cluberfahrung bieten.'}
+		</p>
+		<br />
+		<p class="m-5">
+			{$language.englishSelected
+				? 'Today we are proud to announce our first event in Darmstadts first virtual event space!'
+				: 'Heute freuen wir uns, als erster komplett virtueller Veranstaltungsraum Darmstadts zum ersten Mal die Türen ins Kellergewölbe zu öffnen.'}
+		</p>
+	</div>
 </section>
 
 <section id="mitmachen">
-	<h2 class="side-header">Mitmachen</h2>
-	<p>
-		Wir treffen uns in VRChat. Ein VR Headset ist nicht notwendig, macht das Erlebnis aber
-		immersiver.
-	</p>
-	<br />
-	<div class="button-container">
-		<div>
-			<span class="button-container__counter">1.</span>
-			<img class="w-24" src="/images/vrchat-logo.png" alt="" srcset="" />
-			<a href="https://hello.vrchat.com/">Account erstellen</a>
+	<div class="slide-content flex flex-col lg:flex-col items-center justify-center">
+		<h2 class="side-header">
+			{$language.englishSelected ? 'Join us' : 'Mitmachen'}
+		</h2>
+		<p>
+			{$language.englishSelected
+				? 'We will meet in VRChat. A headset is not required, but makes the experience much more immersive.'
+				: 'Wir treffen uns in VRChat. Ein VR Headset ist nicht notwendig, macht das Erlebnis aber immersiver.'}
+		</p>
+		<br />
+		<div class="button-container">
+			<div>
+				<span class="button-container__counter">1.</span>
+				<img class="w-24" src="/images/vrchat-logo.png" alt="" srcset="" />
+				<a href="https://hello.vrchat.com/">
+					{$language.englishSelected ? 'Create account' : 'Account erstellen'}</a
+				>
+			</div>
+			<div>
+				<span class="button-container__counter">2.</span>
+
+				<a href="https://vrchat.com/home/user/usr_933c3cf3-6f8a-44f5-8a87-0f582220a124"
+					>{$language.englishSelected
+						? 'send us a friend request'
+						: 'Kellerkind als Freund hinzufügen'}</a
+				>
+			</div>
+			<div>
+				<span class="button-container__counter">3.</span>
+				<img class="w-14" src="images/invite-icon.png" alt="VrChat invitation icon" srcset="" />
+				{$language.englishSelected
+					? 'You will receive an invite once the event begins'
+					: 'Du bekommst zu Beginn der Veranstaltung eine Einladung'}
+			</div>
 		</div>
-		<div>
-			<span class="button-container__counter">2.</span>
-			Kellerkind als
-			<a href="https://vrchat.com/home/user/usr_933c3cf3-6f8a-44f5-8a87-0f582220a124"
-				>Freund hinzufügen</a
-			>
-		</div>
-		<div>
-			<span class="button-container__counter">3.</span>
-			<img class="w-24" src="images/invite-icon.png" alt="VrChat invitation icon" srcset="" /> Zu Beginn
-			der Veranstaltung wirst du eingeladen
-		</div>
+		<p class="mb-10">
+			{$language.englishSelected
+				? 'Depending on network conditions, the maximum number of participants is limited between 50 to 80 people. Come early!'
+				: 'Die Teilnehmerzahl ist je nach Netzwerkauslastung auf 50-80 Personen limitert. Früh kommen lohnt sich!'}
+		</p>
 	</div>
-	<p>
-		Die Teilnehmerzahl ist je nach Netzwerkauslastung auf 50-80 Personen limitert. Früh kommen lohnt
-		sich!
-	</p>
 </section>
 
 <section id="regeln">
-	<div class="flex">
-		<div class="m-2">
+	<div class="flex sm:flex-row flex-col slide-content">
+		<div class="m-2 flex flex-col justify-center items-center">
 			<h2 class="smol-header">18+</h2>
-			<p>Alterskontrollen am Eingang</p>
+			<p class="text-center">
+				{$language.englishSelected
+					? 'No minors! We will attempt to verify your age at the door'
+					: 'Alterskontrollen am Eingang'}
+			</p>
 		</div>
 		<div class="m-8">
 			<h2 class="smol-header">Avatar Limits</h2>
-			<p>
-				Du darfst dich bei uns frei ausdrücken. Achte aber bitte darauf, dass dein Avatar nicht zu
-				komplex ist. <br /> Dein Avatar ist zu groß, wenn du nicht mehr durch die Tür passt.
+			<p class="text-right">
+				{$language.englishSelected
+					? 'You are free to express yourself however you like, but please be mindful of VRChats avatar performance limits. If you get stuck at the door, your avatar is probably too big.'
+					: 'Du darfst dich bei uns frei ausdrücken. Achte aber bitte darauf, dass dein Avatar nicht zu komplex ist. Dein Avatar ist zu groß, wenn du nicht mehr durch die Tür passt.'}
 			</p>
 		</div>
 	</div>
 </section>
 <section id="byod">
-	<h2 class="side-header">Bring your own drinks</h2>
-	<p>
-		Wir können Getränke leider noch nicht über Datenleitungen streamen. Sobald das geht, wird Chris
-		sicherlich auch wieder die Zapfanlage anmachen.
-	</p>
+	<div class="slide-content">
+		<h2 class="side-header">Bring your own drinks</h2>
+		<p>
+			{$language.englishSelected
+				? 'As of now, we are unable to stream drinks over the network. We will let you know once we figure out how to do that.'
+				: 'Wir können Getränke leider noch nicht über Datenleitungen streamen. Sobald das geht, wird Chris sicherlich auch wieder die Zapfanlage in Betrieb nehmen.'}
+		</p>
+	</div>
 </section>
 
-<section>
-	<h3 class="max-w-md">
-		Weitere infos und Ankündigungen zu dieser und weiteren veranstaltungen findest du hier
-	</h3>
+<section id="faq">
+	<div class="flex sm:flex-col items-center flex-col slide-content">
+		<h2 class="side-header">FAQ</h2>
+		<h3>
+			{$language.englishSelected
+				? 'For more information about this and future events'
+				: 'Weitere Infos und Ankündigungen zu dieser und weiteren Veranstaltungen findest du hier'}
+		</h3>
 
-	<div class="flex m-8 text-white">
-		<a href="https://discord.gg/jxWZvFxry2"
-			><img class="w-44 hover-img" src="/images/discord-logo.png" alt="Discord Logo" /></a
-		>
-		<a href="https://instagram.com/schlosskellerdarmstadt"
-			><img class="w-20 hover-img" src="/images/instagram-logo.png" alt="" srcset="" /></a
-		>
+		<div class="button-container">
+			<div>
+				<img class="w-44" src="/images/discord-logo.png" alt="Discord Logo" />
+				<a href="https://discord.gg/jxWZvFxry2">
+					{$language.englishSelected ? 'join our community' : 'Community beitreten'}
+				</a>
+			</div>
+			<div>
+				<img class="w-20" src="/images/instagram-logo.png" alt="" srcset="" />
+				<a href="https://instagram.com/schlosskellerdarmstadt">
+					{$language.englishSelected ? 'follow us on insta' : 'folge uns auf insta'}
+				</a>
+			</div>
+		</div>
+
+		<div class="flex m-8 text-white button-container" />
+		<h3 class="slide-content">
+			{$language.englishSelected
+				? 'No, there will not be an NFT collection'
+				: 'Nein, es wird keine NFT Kollektion geben'}
+		</h3>
 	</div>
-	<h3 class="max-w-md ">Nein, wir werden keine NFTs verkaufen</h3>
 </section>
 
 <style>
 	section {
 		width: 100vw;
-		height: 100vh;
+		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -122,13 +164,30 @@
 		background-size: cover;
 		position: relative;
 	}
+	div {
+	}
+
+	.slide-content {
+		max-width: 90vw;
+		filter: drop-shadow(3px 3px 2px black);
+	}
 
 	.side-header {
 		text-transform: uppercase;
-		font-size: 3rem;
-		position: absolute;
-		left: 4rem;
-		top: 5rem;
+		font-size: 3em;
+		position: relative;
+		/* left: 4rem;
+		top: 5rem; */
+		margin: 1rem 0;
+		-webkit-text-stroke: 2px black;
+		max-width: 50rem;
+		line-height: 1.2;
+	}
+
+	.smol-header {
+		font-size: 2.5rem;
+		line-height: 1.2;
+		-webkit-text-stroke: 2px black;
 	}
 
 	.hover-img:hover {
@@ -140,7 +199,8 @@
 	}
 
 	p {
-		max-width: 24rem;
+		max-width: 35rem;
+		font-size: 1em;
 	}
 
 	section:nth-child(1) {
@@ -169,7 +229,7 @@
 	.button-container {
 		display: flex;
 		flex-direction: row;
-		margin: 2rem;
+		margin: 1.5rem;
 		font-family: Rubik Mono One;
 	}
 	.button-container__counter {
@@ -191,6 +251,9 @@
 		border: 2px solid white;
 		margin: 0.5rem;
 		max-width: 18rem;
+	}
+	.button-container > div:hover {
+		transform: scale(1.05);
 	}
 
 	.welcome {

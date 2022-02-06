@@ -13,3 +13,5 @@ schlosskeller.club event page
 - layout is still not whats in figma
 
 ## built using svelte-next
+> npm i
+> npm run dev

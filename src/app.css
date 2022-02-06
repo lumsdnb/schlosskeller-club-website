@@ -27,6 +27,10 @@
 	--column-margin-top: 4rem;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
 body {
 	font-family: 'Space Grotesk';
 	min-height: 100vh;

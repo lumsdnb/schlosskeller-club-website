@@ -59,25 +59,28 @@
 			<div>
 				<span class="button-container__counter">1.</span>
 				<img class="w-24" src="/images/vrchat-logo.png" alt="" srcset="" />
+				<p>
 				<a href="https://hello.vrchat.com/">
 					{$language.englishSelected ? 'Create account' : 'Account erstellen'}</a
-				>
+				></p>
 			</div>
 			<div>
 				<span class="button-container__counter">2.</span>
-
+				<p>
 				<a href="https://vrchat.com/home/user/usr_933c3cf3-6f8a-44f5-8a87-0f582220a124"
 					>{$language.englishSelected
 						? 'send us a friend request'
 						: 'Kellerkind als Freund hinzufügen'}</a
-				>
+				></p>
 			</div>
 			<div>
 				<span class="button-container__counter">3.</span>
 				<img class="w-14" src="images/invite-icon.png" alt="VrChat invitation icon" srcset="" />
+				<p>
 				{$language.englishSelected
 					? 'You will receive an invite once the event begins'
 					: 'Du bekommst zu Beginn der Veranstaltung eine Einladung'}
+					</p>
 			</div>
 		</div>
 		<p class="mb-10">
@@ -131,15 +134,19 @@
 		<div class="button-container">
 			<div>
 				<img class="w-44" src="/images/discord-logo.png" alt="Discord Logo" />
+				<p>
 				<a href="https://discord.gg/jxWZvFxry2">
 					{$language.englishSelected ? 'join our community' : 'Community beitreten'}
 				</a>
+				</p>
 			</div>
 			<div>
 				<img class="w-20" src="/images/instagram-logo.png" alt="" srcset="" />
+				<p>
 				<a href="https://instagram.com/schlosskellerdarmstadt">
 					{$language.englishSelected ? 'follow us on insta' : 'folge uns auf insta'}
 				</a>
+				</p>
 			</div>
 		</div>
 
@@ -199,27 +206,28 @@
 	}
 
 	p {
+		position:relative;
 		max-width: 35rem;
 		font-size: 1em;
 	}
 
 	section:nth-child(1) {
-		background-image: url('/images/bild1.png');
+		background-image: url('/images/bild1.webp');
 	}
 	section:nth-child(2) {
-		background-image: url('/images/bild2.png');
+		background-image: url('/images/bild2.webp');
 	}
 	section:nth-child(3) {
-		background-image: url('/images/bild3.png');
+		background-image: url('/images/bild3.webp');
 	}
 	section:nth-child(4) {
-		background-image: url('/images/bild4.png');
+		background-image: url('/images/bild4.webp');
 	}
 	section:nth-child(5) {
-		background-image: url('/images/bild5.png');
+		background-image: url('/images/bild5.webp');
 	}
 	section:nth-child(6) {
-		background-image: url('/images/bild6.png');
+		background-image: url('/images/bild6.webp');
 	}
 
 	h1 {
@@ -246,7 +254,9 @@
 		align-items: center;
 		justify-content: center;
 		padding: 2rem;
-		background-color: black;
+		background: black no-repeat center;
+		background-attachment:fixed;
+		background-size:cover;
 		color: white;
 		border: 2px solid white;
 		margin: 0.5rem;

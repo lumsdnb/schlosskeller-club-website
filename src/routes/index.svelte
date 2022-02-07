@@ -8,6 +8,15 @@
 </svelte:head>
 
 <section id="schlosskellerplus">
+
+	<video autoplay muted loop id="myVideo">
+		<source src="\video\banner_video.mp4" type="video/mp4">
+		Your browser does not support HTML5 video.
+	</video>
+	<!--<img class="bannerarc" src="/images/arc_banner.png" />-->
+	<div class="bannerarcdiv"  ></div>
+
+	
 	<h1>
 		SEITE IST NOCH NICHT FERTIG PLS NOCH NICHT MIT LEUTEN TEILEN DANKE LG
 		<div class="welcome">
@@ -171,8 +180,6 @@
 		background-size: cover;
 		position: relative;
 	}
-	div {
-	}
 
 	.slide-content {
 		max-width: 90vw;
@@ -212,8 +219,32 @@
 	}
 
 	section:nth-child(1) {
-		background-image: url('/images/bild1.webp');
+		background-image: url('/images/arc_banner.png');
+		z-index: 100;
+		position:relative;
 	}
+	.bannerarc {
+		position:absolute;
+		z-index: 1000;
+		min-height: 100vh;
+	}
+	.bannerarcdiv {
+		background: url('/images/arc_banner.png') no-repeat center;
+		background-size: cover;
+		position:absolute;
+		z-index: 100;
+		min-height: 100vh;
+		width: 100vw;
+	}
+	#myVideo {
+		position: absolute;
+		right: 0;
+		top: 0;
+		min-width: 100vw; 
+		min-height: 100vh;
+		object-fit: cover;
+		z-index:10;
+		}
 	section:nth-child(2) {
 		background-image: url('/images/bild2.webp');
 	}
@@ -272,6 +303,7 @@
 		width: 100%;
 		height: 0;
 		padding: 0 0 calc(100% * 495 / 2048) 0;
+		z-index: 0;
 	}
 
 	.welcome img {

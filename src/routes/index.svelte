@@ -6,171 +6,179 @@
 <svelte:head>
 	<title>Schlosskeller+</title>
 </svelte:head>
+<div class="scrollContainer">
+	<section id="schlosskellerplus">
+		<video autoplay muted loop id="myVideo">
+			<source src="\video\banner_video.mp4" type="video/mp4" />
+			Your browser does not support HTML5 video.
+		</video>
+		<div class="bannerarcdiv" />
 
-<section id="schlosskellerplus">
-
-	<video autoplay muted loop id="myVideo">
-		<source src="\video\banner_video.mp4" type="video/mp4">
-		Your browser does not support HTML5 video.
-	</video>
-	<!--<img class="bannerarc" src="/images/arc_banner.png" />-->
-	<div class="bannerarcdiv"  ></div>
-
-	
-	<h1>
-		SEITE IST NOCH NICHT FERTIG PLS NOCH NICHT MIT LEUTEN TEILEN DANKE LG
-		<div class="welcome">
-			Lineup
-			<ul>
-				<li>Chris (Impuls)</li>
-				<li>David (Soulfood Club)</li>
-				<li>Marian (Bohemica)</li>
-				<li>Lavdim (lostbahnhof)</li>
-			</ul>
-		</div>
-	</h1>
-</section>
-
-<section>
-	<div class="slide-content flex flex-col lg:flex-row">
-		<p class="m-5">
-			{$language.englishSelected
-				? 'Due to unknown reasons, Schlosskeller is still closed.'
-				: 'Aus unbekannten Gründen hat der Schlosskeller immer noch zu.'}
-		</p>
-
-		<p class="m-5">
-			{$language.englishSelected
-				? 'In 2020 we experimented with live streams, but could never achieve a level of immersion comparable with a real club experience.'
-				: 'Wir haben Anfang 2020 mit Live Streams experimentiert, konnten damit aber nie die gleiche Cluberfahrung bieten.'}
-		</p>
-		<br />
-		<p class="m-5">
-			{$language.englishSelected
-				? 'Today we are proud to announce our first event in Darmstadts first virtual event space!'
-				: 'Heute freuen wir uns, als erster komplett virtueller Veranstaltungsraum Darmstadts zum ersten Mal die Türen ins Kellergewölbe zu öffnen.'}
-		</p>
-	</div>
-</section>
-
-<section id="mitmachen">
-	<div class="slide-content flex flex-col lg:flex-col items-center justify-center">
-		<h2 class="side-header">
-			{$language.englishSelected ? 'Join us' : 'Mitmachen'}
-		</h2>
-		<p>
-			{$language.englishSelected
-				? 'We will meet in VRChat. A headset is not required, but makes the experience much more immersive.'
-				: 'Wir treffen uns in VRChat. Ein VR Headset ist nicht notwendig, macht das Erlebnis aber immersiver.'}
-		</p>
-		<br />
-		<div class="button-container">
-			<div>
-				<span class="button-container__counter">1.</span>
-				<img class="w-24" src="/images/vrchat-logo.png" alt="" srcset="" />
-				<p>
-				<a href="https://hello.vrchat.com/">
-					{$language.englishSelected ? 'Create account' : 'Account erstellen'}</a
-				></p>
+		<h1>
+			SEITE IST NOCH NICHT FERTIG PLS NOCH NICHT MIT LEUTEN TEILEN DANKE LG
+			<div class="welcome">
+				Lineup
+				<ul>
+					<li>Chris (Impuls)</li>
+					<li>David (Soulfood Club)</li>
+					<li>Marian (Bohemica)</li>
+					<li>Lavdim (lostbahnhof)</li>
+				</ul>
 			</div>
-			<div>
-				<span class="button-container__counter">2.</span>
-				<p>
-				<a href="https://vrchat.com/home/user/usr_933c3cf3-6f8a-44f5-8a87-0f582220a124"
-					>{$language.englishSelected
-						? 'send us a friend request'
-						: 'Kellerkind als Freund hinzufügen'}</a
-				></p>
-			</div>
-			<div>
-				<span class="button-container__counter">3.</span>
-				<img class="w-14" src="images/invite-icon.png" alt="VrChat invitation icon" srcset="" />
-				<p>
+		</h1>
+	</section>
+
+	<section>
+		<div class="slide-content flex flex-col lg:flex-row">
+			<p class="m-5">
 				{$language.englishSelected
-					? 'You will receive an invite once the event begins'
-					: 'Du bekommst zu Beginn der Veranstaltung eine Einladung'}
+					? 'Due to unknown reasons, Schlosskeller is still closed.'
+					: 'Aus unbekannten Gründen hat der Schlosskeller immer noch zu.'}
+			</p>
+
+			<p class="m-5">
+				{$language.englishSelected
+					? 'In 2020 we experimented with live streams, but could never achieve a level of immersion comparable with a real club experience.'
+					: 'Wir haben Anfang 2020 mit Live Streams experimentiert, konnten damit aber nie die gleiche Cluberfahrung bieten.'}
+			</p>
+			<br />
+			<p class="m-5">
+				{$language.englishSelected
+					? 'Today we are proud to announce our first event in Darmstadts first virtual event space!'
+					: 'Heute freuen wir uns, als erster komplett virtueller Veranstaltungsraum Darmstadts zum ersten Mal die Türen ins Kellergewölbe zu öffnen.'}
+			</p>
+		</div>
+	</section>
+
+	<section id="mitmachen">
+		<div class="slide-content flex flex-col lg:flex-col items-center justify-center">
+			<h2 class="side-header">
+				{$language.englishSelected ? 'Join us' : 'Mitmachen'}
+			</h2>
+			<p>
+				{$language.englishSelected
+					? 'We will meet in VRChat. A headset is not required, but makes the experience much more immersive.'
+					: 'Wir treffen uns in VRChat. Ein VR Headset ist nicht notwendig, macht das Erlebnis aber immersiver.'}
+			</p>
+			<br />
+			<div class="button-container">
+				<div>
+					<span class="button-container__counter">1.</span>
+					<img class="w-24" src="/images/vrchat-logo.png" alt="" srcset="" />
+					<p>
+						<a href="https://hello.vrchat.com/">
+							{$language.englishSelected ? 'Create account' : 'Account erstellen'}</a
+						>
 					</p>
+				</div>
+				<div>
+					<span class="button-container__counter">2.</span>
+					<p>
+						<a href="https://vrchat.com/home/user/usr_933c3cf3-6f8a-44f5-8a87-0f582220a124"
+							>{$language.englishSelected
+								? 'send us a friend request'
+								: 'Kellerkind als Freund hinzufügen'}</a
+						>
+					</p>
+				</div>
+				<div>
+					<span class="button-container__counter">3.</span>
+					<img class="w-14" src="images/invite-icon.png" alt="VrChat invitation icon" srcset="" />
+					<p>
+						{$language.englishSelected
+							? 'You will receive an invite once the event begins'
+							: 'Du bekommst zu Beginn der Veranstaltung eine Einladung'}
+					</p>
+				</div>
 			</div>
-		</div>
-		<p class="mb-10">
-			{$language.englishSelected
-				? 'Depending on network conditions, the maximum number of participants is limited between 50 to 80 people. Come early!'
-				: 'Die Teilnehmerzahl ist je nach Netzwerkauslastung auf 50-80 Personen limitert. Früh kommen lohnt sich!'}
-		</p>
-	</div>
-</section>
-
-<section id="regeln">
-	<div class="flex sm:flex-row flex-col slide-content">
-		<div class="m-2 flex flex-col justify-center items-center">
-			<h2 class="smol-header">18+</h2>
-			<p class="text-center">
+			<p class="mb-10">
 				{$language.englishSelected
-					? 'No minors! We will attempt to verify your age at the door'
-					: 'Alterskontrollen am Eingang'}
+					? 'Depending on network conditions, the maximum number of participants is limited between 50 to 80 people. Come early!'
+					: 'Die Teilnehmerzahl ist je nach Netzwerkauslastung auf 50-80 Personen limitert. Früh kommen lohnt sich!'}
 			</p>
 		</div>
-		<div class="m-8">
-			<h2 class="smol-header">Avatar Limits</h2>
-			<p class="text-right">
-				{$language.englishSelected
-					? 'You are free to express yourself however you like, but please be mindful of VRChats avatar performance limits. If you get stuck at the door, your avatar is probably too big.'
-					: 'Du darfst dich bei uns frei ausdrücken. Achte aber bitte darauf, dass dein Avatar nicht zu komplex ist. Dein Avatar ist zu groß, wenn du nicht mehr durch die Tür passt.'}
-			</p>
-		</div>
-	</div>
-</section>
-<section id="byod">
-	<div class="slide-content">
-		<h2 class="side-header">Bring your own drinks</h2>
-		<p>
-			{$language.englishSelected
-				? 'As of now, we are unable to stream drinks over the network. We will let you know once we figure out how to do that.'
-				: 'Wir können Getränke leider noch nicht über Datenleitungen streamen. Sobald das geht, wird Chris sicherlich auch wieder die Zapfanlage in Betrieb nehmen.'}
-		</p>
-	</div>
-</section>
+	</section>
 
-<section id="faq">
-	<div class="flex sm:flex-col items-center flex-col slide-content">
-		<h2 class="side-header">FAQ</h2>
-		<h3>
-			{$language.englishSelected
-				? 'For more information about this and future events'
-				: 'Weitere Infos und Ankündigungen zu dieser und weiteren Veranstaltungen findest du hier'}
-		</h3>
-
-		<div class="button-container">
-			<div>
-				<img class="w-44" src="/images/discord-logo.png" alt="Discord Logo" />
-				<p>
-				<a href="https://discord.gg/jxWZvFxry2">
-					{$language.englishSelected ? 'join our community' : 'Community beitreten'}
-				</a>
+	<section id="regeln">
+		<div class="flex sm:flex-row flex-col slide-content">
+			<div class="m-2 flex flex-col justify-center items-center">
+				<h2 class="smol-header">18+</h2>
+				<p class="text-center">
+					{$language.englishSelected
+						? 'No minors! We will attempt to verify your age at the door'
+						: 'Alterskontrollen am Eingang'}
 				</p>
 			</div>
-			<div>
-				<img class="w-20" src="/images/instagram-logo.png" alt="" srcset="" />
-				<p>
-				<a href="https://instagram.com/schlosskellerdarmstadt">
-					{$language.englishSelected ? 'follow us on insta' : 'folge uns auf insta'}
-				</a>
+			<div class="m-8">
+				<h2 class="smol-header">Avatar Limits</h2>
+				<p class="text-right">
+					{$language.englishSelected
+						? 'You are free to express yourself however you like, but please be mindful of VRChats avatar performance limits. If you get stuck at the door, your avatar is probably too big.'
+						: 'Du darfst dich bei uns frei ausdrücken. Achte aber bitte darauf, dass dein Avatar nicht zu komplex ist. Dein Avatar ist zu groß, wenn du nicht mehr durch die Tür passt.'}
 				</p>
 			</div>
 		</div>
+	</section>
+	<section id="byod">
+		<div class="slide-content">
+			<h2 class="side-header">Bring your own drinks</h2>
+			<p>
+				{$language.englishSelected
+					? 'As of now, we are unable to stream drinks over the network. We will let you know once we figure out how to do that.'
+					: 'Wir können Getränke leider noch nicht über Datenleitungen streamen. Sobald das geht, wird Chris sicherlich auch wieder die Zapfanlage in Betrieb nehmen.'}
+			</p>
+		</div>
+	</section>
 
-		<div class="flex m-8 text-white button-container" />
-		<h3 class="slide-content">
-			{$language.englishSelected
-				? 'No, there will not be an NFT collection'
-				: 'Nein, es wird keine NFT Kollektion geben'}
-		</h3>
-	</div>
-</section>
+	<section id="faq">
+		<div class="flex sm:flex-col items-center flex-col slide-content">
+			<h2 class="side-header">FAQ</h2>
+			<h3>
+				{$language.englishSelected
+					? 'For more information about this and future events'
+					: 'Weitere Infos und Ankündigungen zu dieser und weiteren Veranstaltungen findest du hier'}
+			</h3>
+
+			<div class="button-container">
+				<div>
+					<img class="w-44" src="/images/discord-logo.png" alt="Discord Logo" />
+					<p>
+						<a href="https://discord.gg/jxWZvFxry2">
+							{$language.englishSelected ? 'join our community' : 'Community beitreten'}
+						</a>
+					</p>
+				</div>
+				<div>
+					<img class="w-20" src="/images/instagram-logo.png" alt="" srcset="" />
+					<p>
+						<a href="https://instagram.com/schlosskellerdarmstadt">
+							{$language.englishSelected ? 'follow us on insta' : 'folge uns auf insta'}
+						</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="flex m-8 text-white button-container" />
+			<h3 class="slide-content">
+				{$language.englishSelected
+					? 'No, there will not be an NFT collection'
+					: 'Nein, es wird keine NFT Kollektion geben'}
+			</h3>
+		</div>
+	</section>
+	<div style="height:calc(20vh + 80px);scroll-snap-align:end;" />
+</div>
 
 <style>
+	.scrollContainer {
+		overflow: auto;
+		width: 100%;
+		height: 100vh;
+		scroll-snap-type: y proximity;
+		scroll-behavior: smooth !important;
+	}
 	section {
-		width: 100vw;
+		max-width: 100%;
 		min-height: 100vh;
 		display: flex;
 		flex-direction: column;
@@ -179,6 +187,8 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: relative;
+		scroll-snap-stop: normal !important;
+		scroll-snap-align: end;
 	}
 
 	.slide-content {
@@ -213,38 +223,41 @@
 	}
 
 	p {
-		position:relative;
+		position: relative;
 		max-width: 35rem;
 		font-size: 1em;
 	}
 
 	section:nth-child(1) {
+		max-height: 100vh;
 		background-image: url('/images/arc_banner.png');
 		z-index: 100;
-		position:relative;
+		position: relative;
 	}
 	.bannerarc {
-		position:absolute;
+		position: absolute;
 		z-index: 1000;
 		min-height: 100vh;
 	}
 	.bannerarcdiv {
 		background: url('/images/arc_banner.png') no-repeat center;
 		background-size: cover;
-		position:absolute;
+		position: absolute;
 		z-index: 100;
 		min-height: 100vh;
-		width: 100vw;
+		max-height: 100vh;
+		width: 100%;
 	}
 	#myVideo {
 		position: absolute;
 		right: 0;
 		top: 0;
-		min-width: 100vw; 
+		min-width: 100%;
 		min-height: 100vh;
+		max-height: 100vh;
 		object-fit: cover;
-		z-index:10;
-		}
+		z-index: 10;
+	}
 	section:nth-child(2) {
 		background-image: url('/images/bild2.webp');
 	}
@@ -286,8 +299,8 @@
 		justify-content: center;
 		padding: 2rem;
 		background: black no-repeat center;
-		background-attachment:fixed;
-		background-size:cover;
+		background-attachment: fixed;
+		background-size: cover;
 		color: white;
 		border: 2px solid white;
 		margin: 0.5rem;
@@ -321,4 +334,5 @@
 			flex-direction: column;
 		}
 	}
+
 </style>

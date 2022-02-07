@@ -7,7 +7,7 @@
 
 <header>
 	<div class="corner">
-		<a href="#top">
+		<a href="#schlosskellerplus">
 			<!-- <img src={logo} alt="Schlosskeller+" /> -->
 			<img src="/logo.png" id="header-image" alt="" srcset="" />
 		</a>
@@ -48,7 +48,7 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 1;
+		z-index: 2;
 		background: rgb(2, 0, 36);
 		background: linear-gradient(
 			180deg,

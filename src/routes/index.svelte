@@ -14,18 +14,22 @@
 		</video>
 		<div class="bannerarcdiv" />
 
-		<h1>
-			SEITE IST NOCH NICHT FERTIG PLS NOCH NICHT MIT LEUTEN TEILEN DANKE LG
-			<div class="welcome">
-				Lineup
-				<ul>
-					<li>Chris (Impuls)</li>
-					<li>David (Soulfood Club)</li>
-					<li>Marian (Bohemica)</li>
-					<li>Lavdim (lostbahnhof)</li>
-				</ul>
-			</div>
-		</h1>
+		<div class="welcome">
+			<img src="images/skplus.png" id="skplus" alt="" srcset="" />
+			Music by
+			<ul>
+				<li>CHRIS..............................IMPULS</li>
+				<li>DAVID........SOULFOOD CLUB</li>
+				<li>LAVDIM........LOSTBAHNHOF</li>
+				<li>MARIAN..................BOHEMICA</li>
+			</ul>
+		</div>
+		<span class="scrolling-text --left"
+			>IMMERSIVE VIRTUAL REALITY EXPERIENCE - BRING YOUR OWN DRINKS</span
+		>
+		<span class="scrolling-text --right"
+			>BIOHAZARD WORLDWIDE STAY AT HOME CYBERSPACE FUTURE PARTY</span
+		>
 	</section>
 
 	<section>
@@ -133,11 +137,55 @@
 	<section id="faq">
 		<div class="flex sm:flex-col items-center flex-col slide-content">
 			<h2 class="side-header">FAQ</h2>
-			<h3>
-				{$language.englishSelected
-					? 'For more information about this and future events'
-					: 'Weitere Infos und Ankündigungen zu dieser und weiteren Veranstaltungen findest du hier'}
-			</h3>
+			<details open>
+				<summary
+					>{$language.englishSelected
+						? 'Do I need a VR headset?'
+						: 'Brauche ich eine VR Brille?'}</summary
+				>
+				<div class="faq__content">
+					<p>
+						{$language.englishSelected
+							? 'No, VRChat, despite the name, can also be played on a regular computer.'
+							: 'Nein, VRChat kann auch auf dem Computer gespielt werden.'}
+					</p>
+				</div>
+			</details>
+			<details>
+				<summary>
+					{$language.englishSelected
+						? 'How do I create a custom avatar?'
+						: 'Wie erstelle ich einen eigenen Avatar?'}
+				</summary>
+				<div class="faq__content">
+					<p>{$language.englishSelected
+							? 'There are different ways to get your own personalized avatar. The easiest would be something like Ready Player Me, which works in the browser. You can also browse avatar worlds in VRChat, or create a custom character using free tools like Vroid Studio.'
+							: 'Es gibt verschiedene Möglichkeiten, um deinen eigenen Avatar zu erschaffen. Am einfachsten ist Ready Player Me, wo du einen Avatar im Browser erstellen und hochladen kannst. Du kannst aber auch in VRChat selbst nach Avatar Welten suchen, oder dir einen ganz eigenen in freier 3D Software kreieren.'}
+						<a href="https://readyplayer.me">Ready Player Me</a>
+						<a href="https://vroid.com/studio">Vroid Studio</a>
+					</p>
+					<p>
+						{$language.englishSelected
+							? 'Feel free to ask for help on our Discord server, we will do our best to help you get your creation online.'
+							: 'Solltest du Fragen zur Avatar Erstellung haben, können wir dir auf unserem Discord Server helfen.'}
+				
+						</p>
+				</div>
+			</details>
+			<details>
+				<summary>
+					{$language.englishSelected
+						? 'Will there be a limited NFT collection?'
+						: 'Wird es eine limitierte NFT Kollektion geben?'}
+				</summary>
+				<div class="faq__content">
+					<p>
+						{$language.englishSelected
+							? 'No, there will be no limited NFT collection.'
+							: 'Nein, es wird keine limitierte NFT Kollektion geben.'}
+					</p>
+				</div>
+			</details>
 
 			<div class="button-container">
 				<div>
@@ -152,18 +200,11 @@
 					<img class="w-20" src="/images/instagram-logo.png" alt="" srcset="" />
 					<p>
 						<a href="https://instagram.com/schlosskellerdarmstadt">
-							{$language.englishSelected ? 'follow us on insta' : 'folge uns auf insta'}
+							{$language.englishSelected ? 'follow us on insta' : 'Folge uns auf insta'}
 						</a>
 					</p>
 				</div>
 			</div>
-
-			<div class="flex m-8 text-white button-container" />
-			<h3 class="slide-content">
-				{$language.englishSelected
-					? 'No, there will not be an NFT collection'
-					: 'Nein, es wird keine NFT Kollektion geben'}
-			</h3>
 		</div>
 	</section>
 	<div style="height:calc(20vh + 80px);scroll-snap-align:end;" />
@@ -203,7 +244,6 @@
 		/* left: 4rem;
 		top: 5rem; */
 		margin: 1rem 0;
-		-webkit-text-stroke: 2px black;
 		max-width: 50rem;
 		line-height: 1.2;
 	}
@@ -211,7 +251,6 @@
 	.smol-header {
 		font-size: 2.5rem;
 		line-height: 1.2;
-		-webkit-text-stroke: 2px black;
 	}
 
 	.hover-img:hover {
@@ -282,8 +321,9 @@
 	.button-container {
 		display: flex;
 		flex-direction: row;
+		font-size: 2rem;
 		margin: 1.5rem;
-		font-family: Rubik Mono One;
+		font-family: Gruppo;
 	}
 	.button-container__counter {
 		position: absolute;
@@ -307,6 +347,11 @@
 		margin: 0.5rem;
 		max-width: 18rem;
 	}
+
+	.button-container p {
+		line-height: 0.9;
+	}
+
 	.button-container > div:hover {
 		transform: scale(1.05);
 		transition: all 70ms ease-in-out;
@@ -315,18 +360,80 @@
 	.welcome {
 		position: relative;
 		width: 100%;
-		height: 0;
 		padding: 0 0 calc(100% * 495 / 2048) 0;
-		z-index: 0;
+		padding-top: 0px;
+		z-index: 10;
+		text-align: center;
+		top: 48%;
+		font-family: 'Gismonda FG', sans-serif;
+		color: white;
+		filter: drop-shadow(2px 2px 2px black);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding-top: 95vh;
 	}
 
 	.welcome img {
-		position: absolute;
-		width: 20%;
-		height: 20%;
+		position: relative;
+		height: 40px;
 		top: 0;
 		display: block;
+		z-index: 1000;
+		margin-bottom: 32px;
 	}
+
+	/* --------------------------- FAQ page -------------------------- */
+
+	summary {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: var(--accent-color);
+		padding: 1rem;
+		margin-bottom: 1rem;
+		outline: none;
+		border-radius: 0.25rem;
+		text-align: left;
+		cursor: pointer;
+		position: relative;
+		background-color: black;
+		border: 1px solid white;
+	}
+	
+	details[open] {
+		background-color: black;
+		border: 1px solid white;
+	}
+	
+	details > summary::after {
+		position: absolute;
+		content: '+';
+		right: 20px;
+	}
+	details[open] > summary::after {
+		position: absolute;
+		content: '-';
+		right: 20px;
+	}
+	details > summary::-webkit-details-marker {
+		display: none;
+	}
+
+	details[open] summary ~ * {
+		animation: sweep 0.2s ease-in-out;
+	}
+	@keyframes sweep {
+		0% {
+			opacity: 0;
+			margin-left: -10px;
+		}
+		100% {
+			opacity: 1;
+			margin-left: 0px;
+		}
+	}
+
 	@media screen and (max-width: 45rem) {
 		section {
 			background-position: -15rem;
@@ -335,5 +442,4 @@
 			flex-direction: column;
 		}
 	}
-
 </style>

@@ -175,7 +175,7 @@
 			<details>
 				<summary>
 					{$language.englishSelected
-						? 'Will there be a limited edition NFT collection?'
+						? 'Will there be a limited NFT collection?'
 						: 'Wird es eine limitierte NFT Kollektion geben?'}
 				</summary>
 				<div class="faq__content">
@@ -397,12 +397,12 @@
 		cursor: pointer;
 		position: relative;
 		background-color: black;
-		border: 2px solid white;
+		border: 1px solid white;
 	}
 	
-	details {
+	details[open] {
 		background-color: black;
-		border: 2px solid white;
+		border: 1px solid white;
 	}
 	
 	details > summary::after {
@@ -420,7 +420,7 @@
 	}
 
 	details[open] summary ~ * {
-		animation: sweep 0.5s ease-in-out;
+		animation: sweep 0.2s ease-in-out;
 	}
 	@keyframes sweep {
 		0% {

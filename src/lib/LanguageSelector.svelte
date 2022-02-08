@@ -22,7 +22,7 @@
 <style>
 	div {
 		color: white;
-		font-family: Rubik Mono One;
+		font-family: Gruppo;
 		width: 100%;
 		height: 50%;
 		user-select: none;
@@ -35,6 +35,6 @@
 	span {
 		/* padding: 0.2rem 0.4rem; */
 		text-align: center;
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 </style>

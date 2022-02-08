@@ -23,7 +23,7 @@
 <main>
 	<slot />
 </main>
-<footer style="height:calc(20vh + 80px);margin-top:calc(-20vh - 80px);">
+<footer>
 	<div>
 		<span>
 			{$language.englishSelected ? 'Poster design:' : 'Poster Gestaltung:'}
@@ -43,7 +43,6 @@
 	</div>
 </footer>
 
-
 <style>
 	main {
 		flex: 1;
@@ -54,11 +53,10 @@
 		max-width: 100%;
 		box-sizing: border-box;
 		scroll-snap-type: y proximity;
-
 	}
 
 	footer {
-		font-family: 'Rubik Mono One';
+		font-family: Gruppo;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -66,9 +64,11 @@
 		padding: 40px;
 		background-color: black;
 		color: white;
-		height:20vh;
-		z-index:-1;
+		height: 20vh;
+		z-index: -1;
 		font-size: 1rem;
+		height: calc(20vh + 80px);
+		margin-top: calc(-20vh - 80px);
 	}
 
 	footer a {

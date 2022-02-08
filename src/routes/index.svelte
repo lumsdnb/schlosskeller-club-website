@@ -158,11 +158,18 @@
 						: 'Wie erstelle ich einen eigenen Avatar?'}
 				</summary>
 				<div class="faq__content">
+					<p>{$language.englishSelected
+							? 'There are different ways to get your own personalized avatar. The easiest would be something like Ready Player Me, which works in the browser. You can also browse avatar worlds in VRChat, or create a custom character using free tools like Vroid Studio.'
+							: 'Es gibt verschiedene Möglichkeiten, um deinen eigenen Avatar zu erschaffen. Am einfachsten ist Ready Player Me, wo du einen Avatar im Browser erstellen und hochladen kannst. Du kannst aber auch in VRChat selbst nach Avatar Welten suchen, oder dir einen ganz eigenen in freier 3D Software kreieren.'}
+						<a href="https://readyplayer.me">Ready Player Me</a>
+						<a href="https://vroid.com/studio">Vroid Studio</a>
+					</p>
 					<p>
 						{$language.englishSelected
-							? 'There are different ways to get your own personalized avatar. The easiest would be something like Ready Player Me, which you can create and upload in your browser. A more involved way would be to either find an avatar you like in an avatar world in VRChat, or create one from scratch using 3D software.'
-							: 'Es gibt verschiedene Möglichkeiten, um deinen eigenen Avatar zu gestalten. Am einfachsten ist Ready Player Me, wo du einen Avatar im Browser erstellen und hochladen kannst. Du kannst aber auch in VRChat selbst nach Avatar Welten suchen, oder dir einen komplett neuen Avatar in 3D Software gestalten.'}
-					</p>
+							? 'Feel free to ask for help on our Discord server, we will do our best to help you get your creation online.'
+							: 'Solltest du Fragen zur Avatar Erstellung haben, können wir dir auf unserem Discord Server helfen.'}
+				
+						</p>
 				</div>
 			</details>
 			<details>
@@ -174,8 +181,8 @@
 				<div class="faq__content">
 					<p>
 						{$language.englishSelected
-							? 'No, there will not be an NFT collection'
-							: 'Nein, es wird keine limitierte NFT Kollektion geben'}
+							? 'No, there will be no limited NFT collection.'
+							: 'Nein, es wird keine limitierte NFT Kollektion geben.'}
 					</p>
 				</div>
 			</details>

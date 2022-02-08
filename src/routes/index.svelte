@@ -144,29 +144,42 @@
 						: 'Brauche ich eine VR Brille?'}</summary
 				>
 				<div class="faq__content">
-					<p>Nein, VRChat kann auch auf dem Computer gespielt werden</p>
+					<p>
+						{$language.englishSelected
+							? 'No, VRChat, despite the name, can also be played on a regular computer.'
+							: 'Nein, VRChat kann auch auf dem Computer gespielt werden.'}
+					</p>
 				</div>
 			</details>
 			<details>
-				<summary>Wie erstelle ich einen eigenen Avatar?</summary>
+				<summary>
+					{$language.englishSelected
+						? 'How do I create a custom avatar?'
+						: 'Wie erstelle ich einen eigenen Avatar?'}
+				</summary>
 				<div class="faq__content">
-					<p>Ready Player me oder Vroid - oder einen in VRChat Avatar Welten suchen</p>
+					<p>
+						{$language.englishSelected
+							? 'There are different ways to get your own personalized avatar. The easiest would be something like Ready Player Me, which you can create and upload in your browser. A more involved way would be to either find an avatar you like in an avatar world in VRChat, or create one from scratch using 3D software.'
+							: 'Es gibt verschiedene Möglichkeiten, um deinen eigenen Avatar zu gestalten. Am einfachsten ist Ready Player Me, wo du einen Avatar im Browser erstellen und hochladen kannst. Du kannst aber auch in VRChat selbst nach Avatar Welten suchen, oder dir einen komplett neuen Avatar in 3D Software gestalten.'}
+					</p>
 				</div>
 			</details>
 			<details>
-				<summary>Wird es eine limitierte NFT Kollektion geben?</summary>
+				<summary>
+					{$language.englishSelected
+						? 'Will there be a limited edition NFT collection?'
+						: 'Wird es eine limitierte NFT Kollektion geben?'}
+				</summary>
 				<div class="faq__content">
 					<p>
 						{$language.englishSelected
 							? 'No, there will not be an NFT collection'
-							: 'Nein, es wird keine NFT Kollektion geben'}
+							: 'Nein, es wird keine limitierte NFT Kollektion geben'}
 					</p>
 				</div>
 			</details>
 
-			<div class="flex m-8 text-white button-container">
-				{$language.englishSelected ? 'Find out more' : 'Mehr erfahren'}
-			</div>
 			<div class="button-container">
 				<div>
 					<img class="w-44" src="/images/discord-logo.png" alt="Discord Logo" />
@@ -339,7 +352,6 @@
 	.welcome {
 		position: relative;
 		width: 100%;
-		height: 70vh;
 		padding: 0 0 calc(100% * 495 / 2048) 0;
 		padding-top: 0px;
 		z-index: 10;

@@ -23,8 +23,7 @@
 <main>
 	<slot />
 </main>
-
-<footer>
+<footer style="height:calc(20vh + 80px);margin-top:calc(-20vh - 80px);">
 	<div>
 		<span>
 			{$language.englishSelected ? 'Poster design:' : 'Poster Gestaltung:'}
@@ -44,6 +43,7 @@
 	</div>
 </footer>
 
+
 <style>
 	main {
 		flex: 1;
@@ -51,8 +51,10 @@
 		flex-direction: column;
 		padding: 0;
 		width: 100%;
-		max-width: 1024px;
+		max-width: 100%;
 		box-sizing: border-box;
+		scroll-snap-type: y proximity;
+
 	}
 
 	footer {
@@ -64,6 +66,8 @@
 		padding: 40px;
 		background-color: black;
 		color: white;
+		height:20vh;
+		z-index:-1;
 		font-size: 1rem;
 	}
 

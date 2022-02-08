@@ -396,7 +396,15 @@
 		text-align: left;
 		cursor: pointer;
 		position: relative;
+		background-color: black;
+		border: 2px solid white;
 	}
+	
+	details {
+		background-color: black;
+		border: 2px solid white;
+	}
+	
 	details > summary::after {
 		position: absolute;
 		content: '+';

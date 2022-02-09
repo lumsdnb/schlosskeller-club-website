@@ -1,21 +1,48 @@
 <script context="module" lang="ts">
 	export const prerender = true;
 	import { language } from '../stores';
+	import MediaQuery from "./MediaQuery.svelte";
 </script>
+<script>
+import { HtmlTag } from "svelte/internal";
+
+	$: outerWidth = 0;
+	$: innerWidth = 0;
+	$: outerHeight = 0;
+	$: innerHeight = 0;
+</script>
+
+<svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
+
 
 <svelte:head>
 	<title>Schlosskeller+</title>
+
 </svelte:head>
+
 <div class="scrollContainer">
 	<section id="schlosskellerplus">
-		<video autoplay muted loop id="myVideo">
-			<source src="\video\banner_video.mp4" type="video/mp4" />
-			Your browser does not support HTML5 video.
-		</video>
-		<div class="bannerarcdiv" />
+		<div class="vidarcM">
+		<MediaQuery query="(max-width: 600px)" let:matches>
+			{#if matches}
+			<video autoplay muted loop id="myVideo">
+				<source src="\video\banner_video_mobile.webm" type="video/webm" />
+				</video>
+				{/if}
+		</MediaQuery>
+		<MediaQuery query="(min-width: 621px)" let:matches>
+			{#if matches}
+			<video autoplay muted loop id="myVideo">
+			<source src="\video\banner_video.webm" type="video/webm" />
+			</video>
+			{/if}
+		</MediaQuery>
 
-		<div class="welcome">
-			<img src="images/skplus.png" id="skplus" alt="" srcset="" />
+
+		<div class="bannerarcdiv" />
+	</div>
+		<div class="welcome" style="font-size: {outerWidth > outerHeight? 'calc(16 * 100vw/1/1024)':'calc(18px + 100vw/1/1920)'};">
+			<img src="images/skplus.png" style="height: {outerWidth > outerHeight? 'calc(24 * 100vw/1/1024)':'calc(28px + 100vw/1/1920)'};" id="skplus" alt="" srcset="" />
 			Music by
 			<ul>
 				<li>CHRIS..............................IMPULS</li>
@@ -239,7 +266,7 @@
 
 	.side-header {
 		text-transform: uppercase;
-		font-size: 3em;
+		font-size: 2.5em;
 		position: relative;
 		/* left: 4rem;
 		top: 5rem; */
@@ -298,19 +325,21 @@
 		z-index: 10;
 	}
 	section:nth-child(2) {
-		background-image: url('/images/bild2.webp');
+		background: url('/images/bild2.webp') center;
 	}
 	section:nth-child(3) {
-		background-image: url('/images/bild3.webp');
+		background: url('/images/bild3.webp') center no-repeat;
+		background-size: cover;
+		padding-top: 64px;
 	}
 	section:nth-child(4) {
-		background-image: url('/images/bild4.webp');
+		background: url('/images/bild4.webp') center;
 	}
 	section:nth-child(5) {
-		background-image: url('/images/bild5.webp');
+		background: url('/images/bild5.webp') center;
 	}
 	section:nth-child(6) {
-		background-image: url('/images/bild6.webp');
+		background: url('/images/bild6.webp') center;
 	}
 
 	h1 {
@@ -356,11 +385,10 @@
 		transition: all 70ms ease-in-out;
 	}
 
+
 	.welcome {
 		position: relative;
 		width: 100%;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-		padding-top: 0px;
 		z-index: 10;
 		text-align: center;
 		top: 48%;
@@ -371,16 +399,22 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding-top: 95vh;
+		padding-top: 40vh;
 	}
 
 	.welcome img {
 		position: relative;
-		height: 40px;
 		top: 0;
 		display: block;
 		z-index: 1000;
 		margin-bottom: 32px;
+	}
+
+	.vidarcM {
+		display:flex;
+		position: absolute;
+		height: 100%;
+		width:100%;
 	}
 
 	/* --------------------------- FAQ page -------------------------- */
@@ -440,5 +474,48 @@
 		.button-container {
 			flex-direction: column;
 		}
+	}
+	@media screen and (max-width: 600px) {
+		.bannerarcdiv {
+		background: url('/images/arc_banner_mobile.png') no-repeat center;
+		background-size: cover;
+		position: absolute;
+		z-index: 100;
+		min-height: 100vh;
+		max-height: 100vh;
+		width: 100%;
+	}
+	.vidarcM {
+		zoom: 170%;
+		max-height: 100vh;
+		overflow: hidden;
+
+		
+	}
+	.vidarcM video{
+		top:-35% !important;
+	}
+	.vidarcM .bannerarcdiv{
+		top:-35% !important;
+	}
+	.welcome{
+		padding-top: 48vh !important;
+	}
+	}
+	@media screen and (max-width: 600px) and (min-height: 700px) {
+		.vidarcM {
+		zoom: 150%;
+		max-height: 100vh;
+		overflow: hidden;
+
+		
+	}
+	.vidarcM video{
+		top:-25% !important;
+	}
+	.vidarcM .bannerarcdiv{
+		top:-25% !important;
+	}
+
 	}
 </style>

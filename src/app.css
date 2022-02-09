@@ -1,4 +1,3 @@
-@import url('http://fonts.cdnfonts.com/css/gismonda-fg');
 @import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
 
 @tailwind base;
@@ -6,6 +5,11 @@
 @tailwind utilities;
 
 @layer base {
+	@font-face {
+        font-family: 'Gismonda FG';
+        src: local('Univers'), url('/static/fonts/gismonda-fg.regular.woff') format('woff'),
+            url('/static/fonts/gismonda-fg.regular.woff2') format('woff');
+    },
 	h1,
 	h2,
 	h3,

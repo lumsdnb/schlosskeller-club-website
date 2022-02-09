@@ -28,6 +28,8 @@ import { HtmlTag } from "svelte/internal";
 			<video autoplay muted loop id="myVideo">
 				<source src="\video\banner_video_mobile.mp4" type="video/mp4" />
 				<source src="\video\banner_video_mobile.webm" type="video/webm" />
+				<source src="\images\bannerprev.png" type="video/webm" />
+				bannerprev
 				</video>
 				{/if}
 		</MediaQuery>
@@ -36,6 +38,7 @@ import { HtmlTag } from "svelte/internal";
 			<video autoplay muted loop id="myVideo">
 				<source src="\video\banner_video.mp4" type="video/mp4" />
 				<source src="\video\banner_video.webm" type="video/webm" />
+				<source src="\images\bannerprev.png" type="video/webm" />
 			</video>
 			{/if}
 		</MediaQuery>
@@ -53,12 +56,6 @@ import { HtmlTag } from "svelte/internal";
 				<li>MARIAN..................BOHEMICA</li>
 			</ul>
 		</div>
-		<span class="scrolling-text --left"
-			>IMMERSIVE VIRTUAL REALITY EXPERIENCE - BRING YOUR OWN DRINKS</span
-		>
-		<span class="scrolling-text --right"
-			>BIOHAZARD WORLDWIDE STAY AT HOME CYBERSPACE FUTURE PARTY</span
-		>
 	</section>
 
 	<section>
@@ -297,8 +294,10 @@ import { HtmlTag } from "svelte/internal";
 	}
 
 	section:nth-child(1) {
+		background: linear-gradient( 
+180deg
+, var(--primary-color) 0%, var(--secondary-color) 10.45%, var(--tertiary-color) 51.35%, var(--primary-color) 81.35% );
 		max-height: 100vh;
-		background-image: url('/images/arc_banner.png');
 		z-index: 100;
 		position: relative;
 	}
@@ -401,7 +400,7 @@ import { HtmlTag } from "svelte/internal";
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		padding-top: 40vh;
+		padding-top: 30vh;
 	}
 
 	.welcome img {
@@ -501,7 +500,7 @@ import { HtmlTag } from "svelte/internal";
 		top:-35% !important;
 	}
 	.welcome{
-		padding-top: 48vh !important;
+		padding-top: 25vh !important;
 	}
 	}
 	@media screen and (max-width: 600px) and (min-height: 700px) {

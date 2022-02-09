@@ -26,6 +26,7 @@ import { HtmlTag } from "svelte/internal";
 		<MediaQuery query="(max-width: 600px)" let:matches>
 			{#if matches}
 			<video autoplay muted loop id="myVideo">
+				<source src="\video\banner_video_mobile.mp4" type="video/mp4" />
 				<source src="\video\banner_video_mobile.webm" type="video/webm" />
 				</video>
 				{/if}
@@ -33,7 +34,8 @@ import { HtmlTag } from "svelte/internal";
 		<MediaQuery query="(min-width: 621px)" let:matches>
 			{#if matches}
 			<video autoplay muted loop id="myVideo">
-			<source src="\video\banner_video.webm" type="video/webm" />
+				<source src="\video\banner_video.mp4" type="video/mp4" />
+				<source src="\video\banner_video.webm" type="video/webm" />
 			</video>
 			{/if}
 		</MediaQuery>

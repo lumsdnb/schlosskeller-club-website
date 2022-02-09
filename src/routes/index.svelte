@@ -30,6 +30,7 @@ import CheckIos from './CheckIos.svelte';
 			<CheckIos let:matches>
 				{#if matches}
 				<img
+				id="myVideo"
 				alt=""
 				autoplay
 				loop

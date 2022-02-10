@@ -77,7 +77,7 @@
 				alt=""
 				srcset=""
 			/>
-			Music by
+			music by
 			<ul>
 				<li>CHRIS..............................IMPULS</li>
 				<li>DAVID........SOULFOOD CLUB</li>
@@ -194,7 +194,7 @@
 			<h2 class="side-header">FAQ</h2>
 
 			<div class="faqsection">
-				<details open>
+				<details>
 					<summary
 						>{$language.englishSelected
 							? 'Do I need a VR headset?'
@@ -258,7 +258,7 @@
 					<img class="w-20" src="/images/instagram-logo.png" alt="" srcset="" />
 					<p>
 						<a href="https://instagram.com/schlosskellerdarmstadt">
-							{$language.englishSelected ? 'follow us on insta' : 'Folge uns auf insta'}
+							{$language.englishSelected ? 'follow us on Instagram' : 'Folge uns auf Instagram'}
 						</a>
 					</p>
 				</div>

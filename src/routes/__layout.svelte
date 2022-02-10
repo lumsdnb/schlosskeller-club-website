@@ -33,14 +33,8 @@
 		<br />
 		<span>
 			{$language.englishSelected ? '3D & Web development:' : '3D & Web Entwicklung:'}
-			<a href="https://lums.io">Jeremy</a></span
+			<a href="https://lums.io">Jeremy</a>, Manu</span
 		> <br />
-		<span>
-			{$language.englishSelected
-				? 'Special thanks to Manu for helping with the website'
-				: 'Besonderen Dank an Manu für Hilfe mit der Website'}
-		</span>
-		<br />
 		<span
 			>&copy; 2022 <a href="https://www.schlosskeller-darmstadt.de/">
 				Schlosskeller Darmstadt</a

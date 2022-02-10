@@ -563,11 +563,11 @@
 		max-height: 100vh;
 		width: 100%;
 	}
-	.vidarcM {
-		transform: translate(0,40vh) scale(1.5);
-		max-height: 100vh;
-		overflow: visible;
-	}
+		.vidarcM {
+			transform: translate(0,40vh) scale(1.5);
+			max-height: 100vh;
+			overflow: visible;
+		}
 		section:nth-child(2) {
 			background: url('/images/bild2-mobil.webp') center;
 		}
@@ -589,6 +589,9 @@
 		.vidarcM video {
 			top: -35% !important;
 		}
+		.vidarcM img {
+			top: -35% !important;
+		}
 		.vidarcM .bannerarcdiv {
 			top: -35% !important;
 		}
@@ -603,6 +606,9 @@
 			overflow: visible;
 		}
 		.vidarcM video {
+			top: -25% !important;
+		}
+		.vidarcM img {
 			top: -25% !important;
 		}
 		.vidarcM .bannerarcdiv {

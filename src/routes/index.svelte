@@ -590,7 +590,7 @@
 			top: -35% !important;
 		}
 		.vidarcM img {
-			top: -35% !important;
+			top: -25% !important;
 		}
 		.vidarcM .bannerarcdiv {
 			top: -35% !important;
@@ -601,7 +601,7 @@
 	}
 	@media screen and (max-width: 600px) and (min-height: 700px) {
 		.vidarcM {
-			transform: translate(0,40vh) scale(1.5);
+			transform: translate(0,40vh) scale(1.4);
 			max-height: 100vh;
 			overflow: visible;
 		}
@@ -609,7 +609,7 @@
 			top: -25% !important;
 		}
 		.vidarcM img {
-			top: -25% !important;
+			top: -20% !important;
 		}
 		.vidarcM .bannerarcdiv {
 			top: -25% !important;

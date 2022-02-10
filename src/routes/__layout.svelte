@@ -23,25 +23,6 @@
 <main>
 	<slot />
 </main>
-<footer>
-	<div>
-		<span>
-			{$language.englishSelected ? 'Poster design:' : 'Poster Gestaltung:'}
-
-			<a href="https://www.instagram.com/marianofdeath666">Marian</a></span
-		>
-		<br />
-		<span>
-			{$language.englishSelected ? '3D & Web development:' : '3D & Web Entwicklung:'}
-			<a href="https://lums.io">Jeremy</a></span
-		> <br />
-		<span
-			>&copy; 2022 <a href="https://www.schlosskeller-darmstadt.de/">
-				Schlosskeller Darmstadt</a
-			></span
-		>
-	</div>
-</footer>
 
 <style>
 	main {

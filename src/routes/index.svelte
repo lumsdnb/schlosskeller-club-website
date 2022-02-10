@@ -272,7 +272,25 @@
 			</div>
 		</div>
 	</section>
-	<div style="height:calc(20vh + 80px);scroll-snap-align:end;" />
+	<footer>
+		<div>
+			<span>
+				{$language.englishSelected ? 'Poster design:' : 'Poster Gestaltung:'}
+	
+				<a href="https://www.instagram.com/marianofdeath666">Marian</a></span
+			>
+			<br />
+			<span>
+				{$language.englishSelected ? '3D & Web development:' : '3D & Web Entwicklung:'}
+				<a href="https://lums.io">Jeremy</a></span
+			> <br />
+			<span
+				>&copy; 2022 <a href="https://www.schlosskeller-darmstadt.de/">
+					Schlosskeller Darmstadt</a
+				></span
+			>
+		</div>
+	</footer>
 </div>
 
 <style>
@@ -294,7 +312,7 @@
 		background-size: cover;
 		position: relative;
 		scroll-snap-stop: normal !important;
-		scroll-snap-align: end;
+		scroll-snap-align: start;
 	}
 
 	.slide-content {
@@ -340,7 +358,7 @@
 	}
 
 	.bannerarcdiv {
-		background: url('/images/arc_banner.png') no-repeat center;
+		background: url('/images/arc_banner.webp') no-repeat center;
 		background-size: cover;
 		position: absolute;
 		z-index: 100;
@@ -445,6 +463,31 @@
 		height: 100%;
 		width: 100%;
 	}
+	/*---Footer---*/
+	footer {
+		font-family: Gruppo;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 40px;
+		background-color: black;
+		color: white;
+		height: 20vh;
+		z-index: -1;
+		font-size: 1rem;
+		height: calc(20vh + 80px);
+	}
+
+	footer a {
+		font-weight: bold;
+	}
+
+	@media (min-width: 480px) {
+		footer {
+			padding: 40px 0;
+		}
+	}
 
 	/* --------------------------- FAQ page -------------------------- */
 
@@ -505,6 +548,20 @@
 		}
 	}
 	@media screen and (max-width: 600px) {
+		.bannerarcdiv {
+		background: url('/images/arc_banner_mobile.webp') no-repeat center;
+		background-size: cover;
+		position: absolute;
+		z-index: 100;
+		min-height: 100vh;
+		max-height: 100vh;
+		width: 100%;
+	}
+	.vidarcM {
+		zoom: 170%;
+		max-height: 100vh;
+		overflow: hidden;
+
 		section:nth-child(2) {
 			background: url('/images/bild2-mobil.webp') center;
 		}
@@ -523,20 +580,6 @@
 			background: url('/images/bild6-mobil.webp') center;
 		}
 
-		.bannerarcdiv {
-			background: url('/images/arc_banner_mobile.png') no-repeat center;
-			background-size: cover;
-			position: absolute;
-			z-index: 100;
-			min-height: 100vh;
-			max-height: 100vh;
-			width: 100%;
-		}
-		.vidarcM {
-			zoom: 170%;
-			max-height: 100vh;
-			overflow: hidden;
-		}
 		.vidarcM video {
 			top: -35% !important;
 		}

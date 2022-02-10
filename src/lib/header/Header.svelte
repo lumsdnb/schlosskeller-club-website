@@ -6,33 +6,6 @@
 </script>
 
 <header>
-	<!-- Primary Meta Tags -->
-	<title>Schlosskeller+</title>
-	<meta name="title" content="Schlosskeller+" />
-	<meta
-		name="description"
-		content="BIOHAZARD WORLDWIDE STAY AT HOME CYBERSPACE FUTURE PARTY - IMMERSIVE VIRTUAL REALITY EXPERIENCE - BRING YOUR OWN DRINKS "
-	/>
-
-	<!-- Open Graph / Facebook -->
-	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://schlosskeller.club/" />
-	<meta property="og:title" content="Schlosskeller+" />
-	<meta
-		property="og:description"
-		content="BIOHAZARD WORLDWIDE STAY AT HOME CYBERSPACE FUTURE PARTY - IMMERSIVE VIRTUAL REALITY EXPERIENCE - BRING YOUR OWN DRINKS "
-	/>
-	<meta property="og:image" content="" />
-
-	<!-- Twitter -->
-	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content="https://schlosskeller.club/" />
-	<meta property="twitter:title" content="Schlosskeller+" />
-	<meta
-		property="twitter:description"
-		content="BIOHAZARD WORLDWIDE STAY AT HOME CYBERSPACE FUTURE PARTY - IMMERSIVE VIRTUAL REALITY EXPERIENCE - BRING YOUR OWN DRINKS "
-	/>
-	<meta property="twitter:image" content="" />
 	<div class="corner">
 		<a href="#schlosskellerplus">
 			<!-- <img src={logo} alt="Schlosskeller+" /> -->

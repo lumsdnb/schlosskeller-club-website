@@ -23,6 +23,7 @@
 <main>
 	<slot />
 </main>
+
 <footer>
 	<div>
 		<span>

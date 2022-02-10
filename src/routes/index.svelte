@@ -81,7 +81,6 @@
 				MARCH 5th 2022 <br />
 				20 - 03 GMT+1
 			</p>
-			<br /> <br />
 
 			music by
 			<ul>
@@ -355,6 +354,7 @@
 		max-height: 100vh;
 		z-index: 100;
 		position: relative;
+		overflow:hidden;
 	}
 
 	.bannerarcdiv {
@@ -558,10 +558,10 @@
 		width: 100%;
 	}
 	.vidarcM {
-		zoom: 170%;
+		transform: translate(0,40vh) scale(1.5);
 		max-height: 100vh;
-		overflow: hidden;
-
+		overflow: visible;
+	}
 		section:nth-child(2) {
 			background: url('/images/bild2-mobil.webp') center;
 		}
@@ -592,9 +592,9 @@
 	}
 	@media screen and (max-width: 600px) and (min-height: 700px) {
 		.vidarcM {
-			zoom: 150%;
+			transform: translate(0,40vh) scale(1.5);
 			max-height: 100vh;
-			overflow: hidden;
+			overflow: visible;
 		}
 		.vidarcM video {
 			top: -25% !important;

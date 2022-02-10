@@ -119,6 +119,5 @@
 		object-fit: cover;
 		position: relative;
 		top: 4px;
-		left: -20px;
 	}
 </style>

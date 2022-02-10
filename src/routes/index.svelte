@@ -130,7 +130,7 @@
 					<span class="button-container__counter">1.</span>
 					<img class="w-24" src="/images/vrchat-logo.png" alt="" srcset="" />
 					<p>
-						<a href="https://hello.vrchat.com/">
+						<a href="https://hello.vrchat.com/" target="_blank">
 							{$language.englishSelected ? 'Create account' : 'Account erstellen'}</a
 						>
 					</p>
@@ -138,7 +138,9 @@
 				<div>
 					<span class="button-container__counter">2.</span>
 					<p>
-						<a href="https://vrchat.com/home/user/usr_933c3cf3-6f8a-44f5-8a87-0f582220a124"
+						<a
+							href="https://vrchat.com/home/user/usr_933c3cf3-6f8a-44f5-8a87-0f582220a124"
+							target="_blank"
 							>{$language.englishSelected
 								? 'send us a friend request'
 								: 'Kellerkind als Freund hinzufügen'}</a
@@ -255,7 +257,7 @@
 				<div>
 					<img class="w-44" src="/images/discord-logo.png" alt="Discord Logo" />
 					<p>
-						<a href="https://discord.gg/jxWZvFxry2">
+						<a href="https://discord.gg/jxWZvFxry2" target="_blank">
 							{$language.englishSelected ? 'join our community' : 'Community beitreten'}
 						</a>
 					</p>
@@ -263,7 +265,7 @@
 				<div>
 					<img class="w-20" src="/images/instagram-logo.png" alt="" srcset="" />
 					<p>
-						<a href="https://instagram.com/schlosskellerdarmstadt">
+						<a href="https://instagram.com/schlosskellerdarmstadt" target="_blank">
 							{$language.englishSelected ? 'follow us on Instagram' : 'Folge uns auf Instagram'}
 						</a>
 					</p>
@@ -276,15 +278,19 @@
 			<span>
 				{$language.englishSelected ? 'Poster design:' : 'Poster Gestaltung:'}
 
-				<a href="https://www.instagram.com/marianofdeath666">Marian</a></span
+				<a href="https://www.instagram.com/marianofdeath666" target="_blank">Marian</a></span
 			>
 			<br />
 			<span>
 				{$language.englishSelected ? '3D & Web development:' : '3D & Web Entwicklung:'}
-				<a href="https://lums.io">Jeremy</a> & <a href="https://www.linkedin.com/in/angel-oris-manu-pumahualca-perez-6908ba207/">Manú</a></span
+				<a href="https://lums.io" target="_blank">Jeremy</a> &
+				<a
+					href="https://www.linkedin.com/in/angel-oris-manu-pumahualca-perez-6908ba207/"
+					target="_blank">Manú</a
+				></span
 			> <br />
 			<span
-				>&copy; 2022 <a href="https://www.schlosskeller-darmstadt.de/">
+				>&copy; 2022 <a href="https://www.schlosskeller-darmstadt.de/" target="_blank">
 					Schlosskeller Darmstadt</a
 				></span
 			>
@@ -354,7 +360,7 @@
 		max-height: 100vh;
 		z-index: 100;
 		position: relative;
-		overflow:hidden;
+		overflow: hidden;
 	}
 
 	.bannerarcdiv {
@@ -555,16 +561,16 @@
 	}
 	@media screen and (max-width: 600px) {
 		.bannerarcdiv {
-		background: url('/images/arc_banner_mobile.webp') no-repeat center;
-		background-size: cover;
-		position: absolute;
-		z-index: 100;
-		min-height: 100vh;
-		max-height: 100vh;
-		width: 100%;
-	}
+			background: url('/images/arc_banner_mobile.webp') no-repeat center;
+			background-size: cover;
+			position: absolute;
+			z-index: 100;
+			min-height: 100vh;
+			max-height: 100vh;
+			width: 100%;
+		}
 		.vidarcM {
-			transform: translate(0,40vh) scale(1.5);
+			transform: translate(0, 40vh) scale(1.5);
 			max-height: 100vh;
 			overflow: visible;
 		}
@@ -601,7 +607,7 @@
 	}
 	@media screen and (max-width: 600px) and (min-height: 700px) {
 		.vidarcM {
-			transform: translate(0,40vh) scale(1.4);
+			transform: translate(0, 40vh) scale(1.4);
 			max-height: 100vh;
 			overflow: visible;
 		}

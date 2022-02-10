@@ -29,15 +29,15 @@
 		<span>
 			{$language.englishSelected ? 'Poster design:' : 'Postergestaltung:'}
 
-			<a href="https://www.instagram.com/marianofdeath666">Marian</a></span
+			<a href="https://www.instagram.com/marianofdeath666" target="_blank">Marian</a></span
 		>
 		<br />
 		<span>
 			{$language.englishSelected ? '3D & Web development:' : '3D & Web Entwicklung:'}
-			<a href="https://lums.io">Jeremy</a>, Manu</span
+			<a href="https://lums.io" target="_blank">Jeremy</a>, Manu</span
 		> <br />
 		<span
-			>&copy; 2022 <a href="https://www.schlosskeller-darmstadt.de/">
+			>&copy; 2022 <a href="https://www.schlosskeller-darmstadt.de/" target="_blank">
 				Schlosskeller Darmstadt</a
 			></span
 		>

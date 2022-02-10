@@ -590,7 +590,7 @@
 			top: -35% !important;
 		}
 		.vidarcM img {
-			top: -25% !important;
+			top: -27% !important;
 		}
 		.vidarcM .bannerarcdiv {
 			top: -35% !important;
@@ -609,7 +609,7 @@
 			top: -25% !important;
 		}
 		.vidarcM img {
-			top: -20% !important;
+			top: -22% !important;
 		}
 		.vidarcM .bannerarcdiv {
 			top: -25% !important;

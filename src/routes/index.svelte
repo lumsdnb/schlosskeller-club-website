@@ -2,10 +2,10 @@
 	export const prerender = true;
 	import { language } from '../stores';
 	import MediaQuery from "./MediaQuery.svelte";
+	import CheckIos from './CheckIos.svelte';
 </script>
 <script>
 import { HtmlTag, loop_guard } from "svelte/internal";
-import CheckIos from './CheckIos.svelte';
 
 	$: outerWidth = 0;
 	$: innerWidth = 0;
@@ -25,45 +25,50 @@ import CheckIos from './CheckIos.svelte';
 	<section id="schlosskellerplus">
 		<div class="vidarcM">
 			
-		<MediaQuery query="(max-width: 600px)" let:matches>
-			{#if matches}
-			<CheckIos let:matches>
+			
+			<MediaQuery query="(max-width: 600px)" let:matches>
 				{#if matches}
-				<img
-				id="myVideo"
-				alt=""
-				autoplay
-				loop
-				muted
-				playsinline
-				src="\video\banner_video_mobile.mp4"
-			/>
+				<CheckIos let:matches>
+					{#if matches}
+					<img
+					id="myVideo"
+					alt=""
+					autoplay
+					loop
+					muted
+					playsinline
+					src="\video\banner_video_iphone.mp4"
+					/>
+					{/if}
+				</CheckIos>
+				<CheckIos let:matches>
+					{#if !matches}
+					<video autoplay muted loop id="myVideo">
+						<source src="\video\banner_video_mobile.mp4" type="video/mp4" />
+						<source src="\video\banner_video_mobile.webm" type="video/webm" />
+					</video>
+					{/if}
+				</CheckIos>
+
+					{/if}
+			</MediaQuery>
+			<MediaQuery query="(min-width: 621px)" let:matches>
+				{#if matches}
+					<video autoplay muted loop id="myVideo">
+					<source src="\video\banner_video.mp4" type="video/mp4" />
+					<source src="\video\banner_video.webm" type="video/webm" />
+					</video>
+
 				{/if}
-			</CheckIos>
+			</MediaQuery>
 			<CheckIos let:matches>
 				{#if !matches}
-				<video autoplay muted loop id="myVideo">
-					<source src="\video\banner_video_mobile.mp4" type="video/mp4" />
-					<source src="\video\banner_video_mobile.webm" type="video/webm" />
-				</video>
+				<div class="bannerarcdiv"></div>
 				{/if}
 			</CheckIos>
 
-				{/if}
-		</MediaQuery>
-		<MediaQuery query="(min-width: 621px)" let:matches>
-			{#if matches}
-				<video autoplay muted loop id="myVideo">
-				<source src="\video\banner_video.mp4" type="video/mp4" />
-				<source src="\video\banner_video.webm" type="video/webm" />
-				</video>
-			/>
-			{/if}
-		</MediaQuery>
 
-
-		<div class="bannerarcdiv" />
-	</div>
+		</div>
 		<div class="welcome" style="font-size: {outerWidth > outerHeight? 'calc(16 * 100vw/1/1024)':'calc(18px + 100vw/1/1920)'};">
 			<img src="images/skplus.png" style="height: {outerWidth > outerHeight? 'calc(24 * 100vw/1/1024)':'calc(28px + 100vw/1/1920)'};" id="skplus" alt="" srcset="" />
 			Music by

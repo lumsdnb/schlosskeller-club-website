@@ -77,6 +77,12 @@
 				alt=""
 				srcset=""
 			/>
+			<p class="pb-5">
+				MARCH 5th 2022 <br />
+				20 - 03 GMT+1
+			</p>
+			<br /> <br />
+
 			music by
 			<ul>
 				<li>CHRIS..............................IMPULS</li>
@@ -103,8 +109,8 @@
 			<br />
 			<p class="m-5">
 				{$language.englishSelected
-					? 'Today we are proud to announce our first event in Darmstadts first virtual event space!'
-					: 'Heute freuen wir uns, als erster komplett virtueller Veranstaltungsraum Darmstadts zum ersten Mal die Türen ins Kellergewölbe zu öffnen.'}
+					? 'Today we are proud to announce our first ~CYBERSPACE~ party in Darmstadts first virtual event space!'
+					: 'Heute freuen wir uns, als erster komplett virtueller Veranstaltungsraum Darmstadts unser Kellergewölbe im ~CYBERSPACE~ zu öffnen.'}
 			</p>
 		</div>
 	</section>
@@ -112,7 +118,7 @@
 	<section id="mitmachen">
 		<div class="slide-content flex flex-col lg:flex-col items-center justify-center">
 			<h2 class="side-header">
-				{$language.englishSelected ? 'Join' : 'Mitmachen'}
+				{$language.englishSelected ? 'how to join' : 'Mitmachen'}
 			</h2>
 			<p>
 				{$language.englishSelected
@@ -219,7 +225,8 @@
 							{$language.englishSelected
 								? 'There are different ways to get your own personalized avatar. The easiest would be something like Ready Player Me, which works in the browser. You can also browse avatar worlds in VRChat, or create a custom character using free tools like Vroid Studio.'
 								: 'Es gibt verschiedene Möglichkeiten, um deinen eigenen Avatar zu erschaffen. Am einfachsten ist Ready Player Me, wo du einen Avatar im Browser erstellen und hochladen kannst. Du kannst aber auch in VRChat selbst nach Avatar Welten suchen, oder dir einen ganz eigenen in freier 3D Software kreieren.'}
-							<a href="https://readyplayer.me">Ready Player Me</a>
+							<br />
+							<a href="https://readyplayer.me">Ready Player Me</a> <br />
 							<a href="https://vroid.com/studio">Vroid Studio</a>
 						</p>
 						<p>
@@ -304,6 +311,7 @@
 		margin: 1rem 0;
 		max-width: 50rem;
 		line-height: 1.2;
+		padding-top: 3rem;
 	}
 
 	.smol-header {
@@ -311,18 +319,11 @@
 		line-height: 1.2;
 	}
 
-	.hover-img:hover {
-		transform: scale(1.05);
-	}
-
-	.hover-img:active {
-		transform: scale(0.95);
-	}
-
 	p {
 		position: relative;
 		max-width: 35rem;
 		font-size: 1em;
+		filter: drop-shadow(2px 2px 0px black) !important;
 	}
 
 	section:nth-child(1) {
@@ -337,11 +338,7 @@
 		z-index: 100;
 		position: relative;
 	}
-	.bannerarc {
-		position: absolute;
-		z-index: 1000;
-		min-height: 100vh;
-	}
+
 	.bannerarcdiv {
 		background: url('/images/arc_banner.png') no-repeat center;
 		background-size: cover;
@@ -376,11 +373,7 @@
 		background: url('/images/bild5.webp') center;
 	}
 	section:nth-child(6) {
-		background: url('/images/bild6.webp') center;
-	}
-
-	h1 {
-		width: 100%;
+		background: url('/images/bild6.webp') top;
 	}
 
 	.button-container {
@@ -474,7 +467,7 @@
 	}
 
 	details[open] {
-		padding: 0.5rem 2rem;
+		padding: 1.2rem;
 		background-color: rgba(0, 0, 0, 0.3);
 	}
 
@@ -518,7 +511,7 @@
 		section:nth-child(3) {
 			background: url('/images/bild3-mobil.webp') center no-repeat;
 			background-size: cover;
-			padding-top: 64px;
+			padding-top: 0;
 		}
 		section:nth-child(4) {
 			background: url('/images/bild4-mobil.webp') center;

@@ -404,7 +404,7 @@
 		align-items: center;
 		justify-content: center;
 		padding: 2rem;
-		background: black no-repeat center;
+		background-color: rgba(0, 0, 0, 0.3);
 		background-attachment: fixed;
 		background-size: cover;
 		color: white;
@@ -470,12 +470,12 @@
 		text-align: left;
 		cursor: pointer;
 		position: relative;
-		background-color: black;
+		background-color: rgba(0, 0, 0, 0.3);
 	}
 
 	details[open] {
-		background-color: rgba(0, 0, 0, 0.3);
 		padding: 0.5rem 2rem;
+		background-color: rgba(0, 0, 0, 0.3);
 	}
 
 	details > summary::after {
@@ -507,14 +507,29 @@
 	}
 
 	@media screen and (max-width: 45rem) {
-		section {
-			background-position: -15rem;
-		}
 		.button-container {
 			flex-direction: column;
 		}
 	}
 	@media screen and (max-width: 600px) {
+		section:nth-child(2) {
+			background: url('/images/bild2-mobil.webp') center;
+		}
+		section:nth-child(3) {
+			background: url('/images/bild3-mobil.webp') center no-repeat;
+			background-size: cover;
+			padding-top: 64px;
+		}
+		section:nth-child(4) {
+			background: url('/images/bild4-mobil.webp') center;
+		}
+		section:nth-child(5) {
+			background: url('/images/bild5-mobil.webp') center;
+		}
+		section:nth-child(6) {
+			background: url('/images/bild6-mobil.webp') center;
+		}
+
 		.bannerarcdiv {
 			background: url('/images/arc_banner_mobile.png') no-repeat center;
 			background-size: cover;

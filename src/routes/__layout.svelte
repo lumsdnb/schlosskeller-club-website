@@ -61,6 +61,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 		padding: 40px;
 		background-color: black;
 		color: white;

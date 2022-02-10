@@ -225,11 +225,11 @@
 							{$language.englishSelected
 								? 'There are different ways to get your own personalized avatar. The easiest would be something like Ready Player Me, which works in the browser. You can also browse avatar worlds in VRChat, or create a custom character using free tools like Vroid Studio.'
 								: 'Es gibt verschiedene Möglichkeiten, um deinen eigenen Avatar zu erschaffen. Am einfachsten ist Ready Player Me, wo du einen Avatar im Browser erstellen und hochladen kannst. Du kannst aber auch in VRChat selbst nach Avatar Welten suchen, oder dir einen ganz eigenen in freier 3D Software kreieren.'}
-							<br />
-							<a href="https://readyplayer.me">Ready Player Me</a> <br />
-							<a href="https://vroid.com/studio">Vroid Studio</a>
+							<br /> <br />
+							<a class="pt-2 pb-2" href="https://readyplayer.me">Ready Player Me</a> <br />
+							<a href="https://vroid.com/studio">Vroid Studio</a> <br />
 						</p>
-						<p>
+						<p class="pt-5">
 							{$language.englishSelected
 								? 'Feel free to ask for help on our Discord server, we will do our best to help you get your creation online.'
 								: 'Solltest du Fragen zur Avatar Erstellung haben, können wir dir auf unserem Discord Server helfen.'}
@@ -276,7 +276,7 @@
 		<div>
 			<span>
 				{$language.englishSelected ? 'Poster design:' : 'Poster Gestaltung:'}
-	
+
 				<a href="https://www.instagram.com/marianofdeath666">Marian</a></span
 			>
 			<br />
@@ -378,6 +378,7 @@
 	}
 	section:nth-child(2) {
 		background: url('/images/bild2.webp') center;
+		background-size: cover;
 	}
 	section:nth-child(3) {
 		background: url('/images/bild3.webp') center no-repeat;
@@ -385,13 +386,16 @@
 		padding-top: 64px;
 	}
 	section:nth-child(4) {
-		background: url('/images/bild4.webp') center;
+		background: url('/images/bild4.webp') center no-repeat;
+		background-size: cover;
 	}
 	section:nth-child(5) {
-		background: url('/images/bild5.webp') center;
+		background: url('/images/bild5.webp') center no-repeat;
+		background-size: cover;
 	}
 	section:nth-child(6) {
-		background: url('/images/bild6.webp') top;
+		background: url('/images/bild6.webp') center no-repeat;
+		background-size: cover;
 	}
 
 	.button-container {
@@ -493,10 +497,12 @@
 
 	.faqsection {
 		width: 80vw;
+		max-width: 35rem;
+		font-size: 1.5rem;
 	}
 
 	summary {
-		font-size: 1.25rem;
+		font-size: 1.8rem;
 		font-weight: 600;
 		color: var(--accent-color);
 		padding: 1rem;
@@ -549,19 +555,19 @@
 	}
 	@media screen and (max-width: 600px) {
 		.bannerarcdiv {
-		background: url('/images/arc_banner_mobile.webp') no-repeat center;
-		background-size: cover;
-		position: absolute;
-		z-index: 100;
-		min-height: 100vh;
-		max-height: 100vh;
-		width: 100%;
-	}
-	.vidarcM {
-		zoom: 170%;
-		max-height: 100vh;
-		overflow: hidden;
-
+			background: url('/images/arc_banner_mobile.webp') no-repeat center;
+			background-size: cover;
+			position: absolute;
+			z-index: 100;
+			min-height: 100vh;
+			max-height: 100vh;
+			width: 100%;
+		}
+		.vidarcM {
+			zoom: 170%;
+			max-height: 100vh;
+			overflow: hidden;
+		}
 		section:nth-child(2) {
 			background: url('/images/bild2-mobil.webp') center;
 		}

@@ -1,11 +1,12 @@
 <script context="module" lang="ts">
 	export const prerender = true;
 	import { language } from '../stores';
-	import MediaQuery from "./MediaQuery.svelte";
+	import MediaQuery from './MediaQuery.svelte';
 	import CheckIos from './CheckIos.svelte';
 </script>
+
 <script>
-import { HtmlTag, loop_guard } from "svelte/internal";
+	import { HtmlTag, loop_guard } from 'svelte/internal';
 
 	$: outerWidth = 0;
 	$: innerWidth = 0;
@@ -15,63 +16,74 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 
 <svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
 
-
 <svelte:head>
 	<title>Schlosskeller+</title>
-
 </svelte:head>
 
 <div class="scrollContainer">
 	<section id="schlosskellerplus">
 		<div class="vidarcM">
-			
-			
 			<MediaQuery query="(max-width: 600px)" let:matches>
 				{#if matches}
-				<CheckIos let:matches>
-					{#if matches}
-					<img
-					id="myVideo"
-					alt=""
-					autoplay
-					loop
-					muted
-					playsinline
-					src="\video\banner_video_iphone.mp4"
-					/>
-					{/if}
-				</CheckIos>
-				<CheckIos let:matches>
-					{#if !matches}
-					<video autoplay muted loop id="myVideo">
-						<source src="\video\banner_video_mobile.mp4" type="video/mp4" />
-						<source src="\video\banner_video_mobile.webm" type="video/webm" />
-					</video>
-					{/if}
-				</CheckIos>
-
-					{/if}
+					<CheckIos let:matches>
+						{#if matches}
+							<img
+								id="myVideo"
+								alt=""
+								autoplay
+								loop
+								muted
+								playsinline
+								src="\video\banner_video_iphone.mp4"
+							/>
+						{/if}
+					</CheckIos>
+					<CheckIos let:matches>
+						{#if !matches}
+							<video autoplay muted loop id="myVideo">
+								<source src="\video\banner_video_mobile.mp4" type="video/mp4" />
+								<source src="\video\banner_video_mobile.webm" type="video/webm" />
+							</video>
+						{/if}
+					</CheckIos>
+				{/if}
 			</MediaQuery>
 			<MediaQuery query="(min-width: 621px)" let:matches>
 				{#if matches}
 					<video autoplay muted loop id="myVideo">
-					<source src="\video\banner_video.mp4" type="video/mp4" />
-					<source src="\video\banner_video.webm" type="video/webm" />
+						<source src="\video\banner_video.mp4" type="video/mp4" />
+						<source src="\video\banner_video.webm" type="video/webm" />
 					</video>
-
 				{/if}
 			</MediaQuery>
 			<CheckIos let:matches>
 				{#if !matches}
-				<div class="bannerarcdiv"></div>
+					<div class="bannerarcdiv" />
 				{/if}
 			</CheckIos>
-
-
 		</div>
-		<div class="welcome" style="font-size: {outerWidth > outerHeight? 'calc(16 * 100vw/1/1024)':'calc(18px + 100vw/1/1920)'};">
-			<img src="images/skplus.png" style="height: {outerWidth > outerHeight? 'calc(24 * 100vw/1/1024)':'calc(28px + 100vw/1/1920)'};" id="skplus" alt="" srcset="" />
-			Music by
+		<div
+			class="welcome"
+			style="font-size: {outerWidth > outerHeight
+				? 'calc(16 * 100vw/1/1024)'
+				: 'calc(18px + 100vw/1/1920)'};"
+		>
+			<img
+				src="images/skplus.png"
+				style="height: {outerWidth > outerHeight
+					? 'calc(24 * 100vw/1/1024)'
+					: 'calc(28px + 100vw/1/1920)'};"
+				id="skplus"
+				alt=""
+				srcset=""
+			/>
+			<p class="pb-5">
+				MARCH 5th 2022 <br />
+				20 - 03 GMT+1
+			</p>
+			<br /> <br />
+
+			music by
 			<ul>
 				<li>CHRIS..............................IMPULS</li>
 				<li>DAVID........SOULFOOD CLUB</li>
@@ -97,8 +109,8 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 			<br />
 			<p class="m-5">
 				{$language.englishSelected
-					? 'Today we are proud to announce our first event in Darmstadts first virtual event space!'
-					: 'Heute freuen wir uns, als erster komplett virtueller Veranstaltungsraum Darmstadts zum ersten Mal die Türen ins Kellergewölbe zu öffnen.'}
+					? 'Today we are proud to announce our first ~CYBERSPACE~ party in Darmstadts first virtual event space!'
+					: 'Heute freuen wir uns, als erster komplett virtueller Veranstaltungsraum Darmstadts unser Kellergewölbe im ~CYBERSPACE~ zu öffnen.'}
 			</p>
 		</div>
 	</section>
@@ -106,7 +118,7 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 	<section id="mitmachen">
 		<div class="slide-content flex flex-col lg:flex-col items-center justify-center">
 			<h2 class="side-header">
-				{$language.englishSelected ? 'Join us' : 'Mitmachen'}
+				{$language.englishSelected ? 'how to join' : 'Mitmachen'}
 			</h2>
 			<p>
 				{$language.englishSelected
@@ -186,55 +198,59 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 	<section id="faq">
 		<div class="flex sm:flex-col items-center flex-col slide-content">
 			<h2 class="side-header">FAQ</h2>
-			<details open>
-				<summary
-					>{$language.englishSelected
-						? 'Do I need a VR headset?'
-						: 'Brauche ich eine VR Brille?'}</summary
-				>
-				<div class="faq__content">
-					<p>
-						{$language.englishSelected
-							? 'No, VRChat, despite the name, can also be played on a regular computer.'
-							: 'Nein, VRChat kann auch auf dem Computer gespielt werden.'}
-					</p>
-				</div>
-			</details>
-			<details>
-				<summary>
-					{$language.englishSelected
-						? 'How do I create a custom avatar?'
-						: 'Wie erstelle ich einen eigenen Avatar?'}
-				</summary>
-				<div class="faq__content">
-					<p>{$language.englishSelected
-							? 'There are different ways to get your own personalized avatar. The easiest would be something like Ready Player Me, which works in the browser. You can also browse avatar worlds in VRChat, or create a custom character using free tools like Vroid Studio.'
-							: 'Es gibt verschiedene Möglichkeiten, um deinen eigenen Avatar zu erschaffen. Am einfachsten ist Ready Player Me, wo du einen Avatar im Browser erstellen und hochladen kannst. Du kannst aber auch in VRChat selbst nach Avatar Welten suchen, oder dir einen ganz eigenen in freier 3D Software kreieren.'}
-						<a href="https://readyplayer.me">Ready Player Me</a>
-						<a href="https://vroid.com/studio">Vroid Studio</a>
-					</p>
-					<p>
-						{$language.englishSelected
-							? 'Feel free to ask for help on our Discord server, we will do our best to help you get your creation online.'
-							: 'Solltest du Fragen zur Avatar Erstellung haben, können wir dir auf unserem Discord Server helfen.'}
-				
+
+			<div class="faqsection">
+				<details>
+					<summary
+						>{$language.englishSelected
+							? 'Do I need a VR headset?'
+							: 'Brauche ich eine VR Brille?'}</summary
+					>
+					<div class="faq__content">
+						<p>
+							{$language.englishSelected
+								? 'No, VRChat, despite the name, can also be played on a regular computer.'
+								: 'Nein, VRChat kann auch auf dem Computer gespielt werden.'}
 						</p>
-				</div>
-			</details>
-			<details>
-				<summary>
-					{$language.englishSelected
-						? 'Will there be a limited NFT collection?'
-						: 'Wird es eine limitierte NFT Kollektion geben?'}
-				</summary>
-				<div class="faq__content">
-					<p>
+					</div>
+				</details>
+				<details>
+					<summary>
 						{$language.englishSelected
-							? 'No, there will be no limited NFT collection.'
-							: 'Nein, es wird keine limitierte NFT Kollektion geben.'}
-					</p>
-				</div>
-			</details>
+							? 'How do I create a custom avatar?'
+							: 'Wie erstelle ich einen eigenen Avatar?'}
+					</summary>
+					<div class="faq__content">
+						<p>
+							{$language.englishSelected
+								? 'There are different ways to get your own personalized avatar. The easiest would be something like Ready Player Me, which works in the browser. You can also browse avatar worlds in VRChat, or create a custom character using free tools like Vroid Studio.'
+								: 'Es gibt verschiedene Möglichkeiten, um deinen eigenen Avatar zu erschaffen. Am einfachsten ist Ready Player Me, wo du einen Avatar im Browser erstellen und hochladen kannst. Du kannst aber auch in VRChat selbst nach Avatar Welten suchen, oder dir einen ganz eigenen in freier 3D Software kreieren.'}
+							<br />
+							<a href="https://readyplayer.me">Ready Player Me</a> <br />
+							<a href="https://vroid.com/studio">Vroid Studio</a>
+						</p>
+						<p>
+							{$language.englishSelected
+								? 'Feel free to ask for help on our Discord server, we will do our best to help you get your creation online.'
+								: 'Solltest du Fragen zur Avatar Erstellung haben, können wir dir auf unserem Discord Server helfen.'}
+						</p>
+					</div>
+				</details>
+				<details>
+					<summary>
+						{$language.englishSelected
+							? 'Will there be a limited NFT collection?'
+							: 'Wird es eine limitierte NFT Kollektion geben?'}
+					</summary>
+					<div class="faq__content">
+						<p>
+							{$language.englishSelected
+								? 'No, there will be no limited NFT collection.'
+								: 'Nein, es wird keine limitierte NFT Kollektion geben.'}
+						</p>
+					</div>
+				</details>
+			</div>
 
 			<div class="button-container">
 				<div>
@@ -249,7 +265,7 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 					<img class="w-20" src="/images/instagram-logo.png" alt="" srcset="" />
 					<p>
 						<a href="https://instagram.com/schlosskellerdarmstadt">
-							{$language.englishSelected ? 'follow us on insta' : 'Folge uns auf insta'}
+							{$language.englishSelected ? 'follow us on Instagram' : 'Folge uns auf Instagram'}
 						</a>
 					</p>
 				</div>
@@ -313,6 +329,7 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 		margin: 1rem 0;
 		max-width: 50rem;
 		line-height: 1.2;
+		padding-top: 3rem;
 	}
 
 	.smol-header {
@@ -320,33 +337,26 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 		line-height: 1.2;
 	}
 
-	.hover-img:hover {
-		transform: scale(1.05);
-	}
-
-	.hover-img:active {
-		transform: scale(0.95);
-	}
-
 	p {
 		position: relative;
 		max-width: 35rem;
 		font-size: 1em;
+		filter: drop-shadow(2px 2px 0px black) !important;
 	}
 
 	section:nth-child(1) {
-		background: linear-gradient( 
-180deg
-, var(--primary-color) 0%, var(--secondary-color) 10.45%, var(--tertiary-color) 51.35%, var(--primary-color) 81.35% );
+		background: linear-gradient(
+			180deg,
+			var(--primary-color) 0%,
+			var(--secondary-color) 10.45%,
+			var(--tertiary-color) 51.35%,
+			var(--primary-color) 81.35%
+		);
 		max-height: 100vh;
 		z-index: 100;
 		position: relative;
 	}
-	.bannerarc {
-		position: absolute;
-		z-index: 1000;
-		min-height: 100vh;
-	}
+
 	.bannerarcdiv {
 		background: url('/images/arc_banner.webp') no-repeat center;
 		background-size: cover;
@@ -381,11 +391,7 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 		background: url('/images/bild5.webp') center;
 	}
 	section:nth-child(6) {
-		background: url('/images/bild6.webp') center;
-	}
-
-	h1 {
-		width: 100%;
+		background: url('/images/bild6.webp') top;
 	}
 
 	.button-container {
@@ -409,7 +415,7 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 		align-items: center;
 		justify-content: center;
 		padding: 2rem;
-		background: black no-repeat center;
+		background-color: rgba(0, 0, 0, 0.3);
 		background-attachment: fixed;
 		background-size: cover;
 		color: white;
@@ -426,7 +432,6 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 		transform: scale(1.05);
 		transition: all 70ms ease-in-out;
 	}
-
 
 	.welcome {
 		position: relative;
@@ -453,10 +458,10 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 	}
 
 	.vidarcM {
-		display:flex;
+		display: flex;
 		position: absolute;
 		height: 100%;
-		width:100%;
+		width: 100%;
 	}
 	/*---Footer---*/
 	footer {
@@ -486,6 +491,10 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 
 	/* --------------------------- FAQ page -------------------------- */
 
+	.faqsection {
+		width: 80vw;
+	}
+
 	summary {
 		font-size: 1.25rem;
 		font-weight: 600;
@@ -497,15 +506,14 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 		text-align: left;
 		cursor: pointer;
 		position: relative;
-		background-color: black;
-		border: 1px solid white;
+		background-color: rgba(0, 0, 0, 0.3);
 	}
-	
+
 	details[open] {
-		background-color: black;
-		border: 1px solid white;
+		padding: 1.2rem;
+		background-color: rgba(0, 0, 0, 0.3);
 	}
-	
+
 	details > summary::after {
 		position: absolute;
 		content: '+';
@@ -535,9 +543,6 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 	}
 
 	@media screen and (max-width: 45rem) {
-		section {
-			background-position: -15rem;
-		}
 		.button-container {
 			flex-direction: column;
 		}
@@ -557,32 +562,45 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 		max-height: 100vh;
 		overflow: hidden;
 
-		
-	}
-	.vidarcM video{
-		top:-35% !important;
-	}
-	.vidarcM .bannerarcdiv{
-		top:-35% !important;
-	}
-	.welcome{
-		padding-top: 25vh !important;
-	}
+		section:nth-child(2) {
+			background: url('/images/bild2-mobil.webp') center;
+		}
+		section:nth-child(3) {
+			background: url('/images/bild3-mobil.webp') center no-repeat;
+			background-size: cover;
+			padding-top: 0;
+		}
+		section:nth-child(4) {
+			background: url('/images/bild4-mobil.webp') center;
+		}
+		section:nth-child(5) {
+			background: url('/images/bild5-mobil.webp') center;
+		}
+		section:nth-child(6) {
+			background: url('/images/bild6-mobil.webp') center;
+		}
+
+		.vidarcM video {
+			top: -35% !important;
+		}
+		.vidarcM .bannerarcdiv {
+			top: -35% !important;
+		}
+		.welcome {
+			padding-top: 25vh !important;
+		}
 	}
 	@media screen and (max-width: 600px) and (min-height: 700px) {
 		.vidarcM {
-		zoom: 150%;
-		max-height: 100vh;
-		overflow: hidden;
-
-		
-	}
-	.vidarcM video{
-		top:-25% !important;
-	}
-	.vidarcM .bannerarcdiv{
-		top:-25% !important;
-	}
-
+			zoom: 150%;
+			max-height: 100vh;
+			overflow: hidden;
+		}
+		.vidarcM video {
+			top: -25% !important;
+		}
+		.vidarcM .bannerarcdiv {
+			top: -25% !important;
+		}
 	}
 </style>

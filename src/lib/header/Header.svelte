@@ -6,7 +6,6 @@
 </script>
 
 <header>
-	
 	<div class="corner">
 		<a href="#schlosskellerplus">
 			<!-- <img src={logo} alt="Schlosskeller+" /> -->
@@ -21,7 +20,7 @@
 			</li>
 			<li>
 				<a href="#mitmachen">
-					{$language.englishSelected ? 'Join us' : 'Mitmachen'}
+					{$language.englishSelected ? 'Join' : 'Mitmachen'}
 				</a>
 			</li>
 			<li><a href="#faq">FAQ</a></li>
@@ -114,9 +113,12 @@
 	}
 
 	#header-image {
-		height: auto;
+		height: 60%;
 		width: auto;
 		float: left;
 		object-fit: cover;
+		position: relative;
+		top: 4px;
+		left: -20px;
 	}
 </style>

@@ -23,17 +23,18 @@
 <main>
 	<slot />
 </main>
+
 <footer>
 	<div>
 		<span>
-			{$language.englishSelected ? 'Poster design:' : 'Poster Gestaltung:'}
+			{$language.englishSelected ? 'Poster design:' : 'Postergestaltung:'}
 
 			<a href="https://www.instagram.com/marianofdeath666">Marian</a></span
 		>
 		<br />
 		<span>
 			{$language.englishSelected ? '3D & Web development:' : '3D & Web Entwicklung:'}
-			<a href="https://lums.io">Jeremy</a></span
+			<a href="https://lums.io">Jeremy</a>, Manu</span
 		> <br />
 		<span
 			>&copy; 2022 <a href="https://www.schlosskeller-darmstadt.de/">
@@ -61,12 +62,13 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 		padding: 40px;
 		background-color: black;
 		color: white;
 		height: 20vh;
 		z-index: -1;
-		font-size: 1rem;
+		font-size: 1.3rem;
 		height: calc(20vh + 80px);
 		margin-top: calc(-20vh - 80px);
 	}

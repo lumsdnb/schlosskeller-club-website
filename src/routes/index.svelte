@@ -281,7 +281,7 @@
 			<br />
 			<span>
 				{$language.englishSelected ? '3D & Web development:' : '3D & Web Entwicklung:'}
-				<a href="https://lums.io">Jeremy</a></span
+				<a href="https://lums.io">Jeremy</a> & <a href="https://www.linkedin.com/in/angel-oris-manu-pumahualca-perez-6908ba207/">Manú</a></span
 			> <br />
 			<span
 				>&copy; 2022 <a href="https://www.schlosskeller-darmstadt.de/">

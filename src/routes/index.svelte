@@ -1,11 +1,12 @@
 <script context="module" lang="ts">
 	export const prerender = true;
 	import { language } from '../stores';
-	import MediaQuery from "./MediaQuery.svelte";
+	import MediaQuery from './MediaQuery.svelte';
 	import CheckIos from './CheckIos.svelte';
 </script>
+
 <script>
-import { HtmlTag, loop_guard } from "svelte/internal";
+	import { HtmlTag, loop_guard } from 'svelte/internal';
 
 	$: outerWidth = 0;
 	$: innerWidth = 0;
@@ -15,62 +16,67 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 
 <svelte:window bind:innerWidth bind:outerWidth bind:innerHeight bind:outerHeight />
 
-
 <svelte:head>
 	<title>Schlosskeller+</title>
-
 </svelte:head>
 
 <div class="scrollContainer">
 	<section id="schlosskellerplus">
 		<div class="vidarcM">
-			
-			
 			<MediaQuery query="(max-width: 600px)" let:matches>
 				{#if matches}
-				<CheckIos let:matches>
-					{#if matches}
-					<img
-					id="myVideo"
-					alt=""
-					autoplay
-					loop
-					muted
-					playsinline
-					src="\video\banner_video_iphone.mp4"
-					/>
-					{/if}
-				</CheckIos>
-				<CheckIos let:matches>
-					{#if !matches}
-					<video autoplay muted loop id="myVideo">
-						<source src="\video\banner_video_mobile.mp4" type="video/mp4" />
-						<source src="\video\banner_video_mobile.webm" type="video/webm" />
-					</video>
-					{/if}
-				</CheckIos>
-
-					{/if}
+					<CheckIos let:matches>
+						{#if matches}
+							<img
+								id="myVideo"
+								alt=""
+								autoplay
+								loop
+								muted
+								playsinline
+								src="\video\banner_video_iphone.mp4"
+							/>
+						{/if}
+					</CheckIos>
+					<CheckIos let:matches>
+						{#if !matches}
+							<video autoplay muted loop id="myVideo">
+								<source src="\video\banner_video_mobile.mp4" type="video/mp4" />
+								<source src="\video\banner_video_mobile.webm" type="video/webm" />
+							</video>
+						{/if}
+					</CheckIos>
+				{/if}
 			</MediaQuery>
 			<MediaQuery query="(min-width: 621px)" let:matches>
 				{#if matches}
 					<video autoplay muted loop id="myVideo">
-					<source src="\video\banner_video.mp4" type="video/mp4" />
-					<source src="\video\banner_video.webm" type="video/webm" />
+						<source src="\video\banner_video.mp4" type="video/mp4" />
+						<source src="\video\banner_video.webm" type="video/webm" />
 					</video>
-
 				{/if}
 			</MediaQuery>
 			<CheckIos let:matches>
 				{#if !matches}
-				<div class="bannerarcdiv"></div>
+					<div class="bannerarcdiv" />
 				{/if}
 			</CheckIos>
-
-
 		</div>
-		<div class="welcome" style="font-size: {outerWidth > outerHeight? 'calc(16 * 100vw/1/1024)':'calc(18px + 100vw/1/1920)'};">
-			<img src="images/skplus.png" style="height: {outerWidth > outerHeight? 'calc(24 * 100vw/1/1024)':'calc(28px + 100vw/1/1920)'};" id="skplus" alt="" srcset="" />
+		<div
+			class="welcome"
+			style="font-size: {outerWidth > outerHeight
+				? 'calc(16 * 100vw/1/1024)'
+				: 'calc(18px + 100vw/1/1920)'};"
+		>
+			<img
+				src="images/skplus.png"
+				style="height: {outerWidth > outerHeight
+					? 'calc(24 * 100vw/1/1024)'
+					: 'calc(28px + 100vw/1/1920)'};"
+				id="skplus"
+				alt=""
+				srcset=""
+			/>
 			Music by
 			<ul>
 				<li>CHRIS..............................IMPULS</li>
@@ -106,7 +112,7 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 	<section id="mitmachen">
 		<div class="slide-content flex flex-col lg:flex-col items-center justify-center">
 			<h2 class="side-header">
-				{$language.englishSelected ? 'Join us' : 'Mitmachen'}
+				{$language.englishSelected ? 'Join' : 'Mitmachen'}
 			</h2>
 			<p>
 				{$language.englishSelected
@@ -186,55 +192,58 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 	<section id="faq">
 		<div class="flex sm:flex-col items-center flex-col slide-content">
 			<h2 class="side-header">FAQ</h2>
-			<details open>
-				<summary
-					>{$language.englishSelected
-						? 'Do I need a VR headset?'
-						: 'Brauche ich eine VR Brille?'}</summary
-				>
-				<div class="faq__content">
-					<p>
-						{$language.englishSelected
-							? 'No, VRChat, despite the name, can also be played on a regular computer.'
-							: 'Nein, VRChat kann auch auf dem Computer gespielt werden.'}
-					</p>
-				</div>
-			</details>
-			<details>
-				<summary>
-					{$language.englishSelected
-						? 'How do I create a custom avatar?'
-						: 'Wie erstelle ich einen eigenen Avatar?'}
-				</summary>
-				<div class="faq__content">
-					<p>{$language.englishSelected
-							? 'There are different ways to get your own personalized avatar. The easiest would be something like Ready Player Me, which works in the browser. You can also browse avatar worlds in VRChat, or create a custom character using free tools like Vroid Studio.'
-							: 'Es gibt verschiedene Möglichkeiten, um deinen eigenen Avatar zu erschaffen. Am einfachsten ist Ready Player Me, wo du einen Avatar im Browser erstellen und hochladen kannst. Du kannst aber auch in VRChat selbst nach Avatar Welten suchen, oder dir einen ganz eigenen in freier 3D Software kreieren.'}
-						<a href="https://readyplayer.me">Ready Player Me</a>
-						<a href="https://vroid.com/studio">Vroid Studio</a>
-					</p>
-					<p>
-						{$language.englishSelected
-							? 'Feel free to ask for help on our Discord server, we will do our best to help you get your creation online.'
-							: 'Solltest du Fragen zur Avatar Erstellung haben, können wir dir auf unserem Discord Server helfen.'}
-				
+
+			<div class="faqsection">
+				<details open>
+					<summary
+						>{$language.englishSelected
+							? 'Do I need a VR headset?'
+							: 'Brauche ich eine VR Brille?'}</summary
+					>
+					<div class="faq__content">
+						<p>
+							{$language.englishSelected
+								? 'No, VRChat, despite the name, can also be played on a regular computer.'
+								: 'Nein, VRChat kann auch auf dem Computer gespielt werden.'}
 						</p>
-				</div>
-			</details>
-			<details>
-				<summary>
-					{$language.englishSelected
-						? 'Will there be a limited NFT collection?'
-						: 'Wird es eine limitierte NFT Kollektion geben?'}
-				</summary>
-				<div class="faq__content">
-					<p>
+					</div>
+				</details>
+				<details>
+					<summary>
 						{$language.englishSelected
-							? 'No, there will be no limited NFT collection.'
-							: 'Nein, es wird keine limitierte NFT Kollektion geben.'}
-					</p>
-				</div>
-			</details>
+							? 'How do I create a custom avatar?'
+							: 'Wie erstelle ich einen eigenen Avatar?'}
+					</summary>
+					<div class="faq__content">
+						<p>
+							{$language.englishSelected
+								? 'There are different ways to get your own personalized avatar. The easiest would be something like Ready Player Me, which works in the browser. You can also browse avatar worlds in VRChat, or create a custom character using free tools like Vroid Studio.'
+								: 'Es gibt verschiedene Möglichkeiten, um deinen eigenen Avatar zu erschaffen. Am einfachsten ist Ready Player Me, wo du einen Avatar im Browser erstellen und hochladen kannst. Du kannst aber auch in VRChat selbst nach Avatar Welten suchen, oder dir einen ganz eigenen in freier 3D Software kreieren.'}
+							<a href="https://readyplayer.me">Ready Player Me</a>
+							<a href="https://vroid.com/studio">Vroid Studio</a>
+						</p>
+						<p>
+							{$language.englishSelected
+								? 'Feel free to ask for help on our Discord server, we will do our best to help you get your creation online.'
+								: 'Solltest du Fragen zur Avatar Erstellung haben, können wir dir auf unserem Discord Server helfen.'}
+						</p>
+					</div>
+				</details>
+				<details>
+					<summary>
+						{$language.englishSelected
+							? 'Will there be a limited NFT collection?'
+							: 'Wird es eine limitierte NFT Kollektion geben?'}
+					</summary>
+					<div class="faq__content">
+						<p>
+							{$language.englishSelected
+								? 'No, there will be no limited NFT collection.'
+								: 'Nein, es wird keine limitierte NFT Kollektion geben.'}
+						</p>
+					</div>
+				</details>
+			</div>
 
 			<div class="button-container">
 				<div>
@@ -317,9 +326,13 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 	}
 
 	section:nth-child(1) {
-		background: linear-gradient( 
-180deg
-, var(--primary-color) 0%, var(--secondary-color) 10.45%, var(--tertiary-color) 51.35%, var(--primary-color) 81.35% );
+		background: linear-gradient(
+			180deg,
+			var(--primary-color) 0%,
+			var(--secondary-color) 10.45%,
+			var(--tertiary-color) 51.35%,
+			var(--primary-color) 81.35%
+		);
 		max-height: 100vh;
 		z-index: 100;
 		position: relative;
@@ -409,7 +422,6 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 		transition: all 70ms ease-in-out;
 	}
 
-
 	.welcome {
 		position: relative;
 		width: 100%;
@@ -435,13 +447,17 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 	}
 
 	.vidarcM {
-		display:flex;
+		display: flex;
 		position: absolute;
 		height: 100%;
-		width:100%;
+		width: 100%;
 	}
 
 	/* --------------------------- FAQ page -------------------------- */
+
+	.faqsection {
+		width: 80vw;
+	}
 
 	summary {
 		font-size: 1.25rem;
@@ -455,14 +471,13 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 		cursor: pointer;
 		position: relative;
 		background-color: black;
-		border: 1px solid white;
 	}
-	
+
 	details[open] {
-		background-color: black;
-		border: 1px solid white;
+		background-color: rgba(0, 0, 0, 0.3);
+		padding: 0.5rem 2rem;
 	}
-	
+
 	details > summary::after {
 		position: absolute;
 		content: '+';
@@ -501,45 +516,40 @@ import { HtmlTag, loop_guard } from "svelte/internal";
 	}
 	@media screen and (max-width: 600px) {
 		.bannerarcdiv {
-		background: url('/images/arc_banner_mobile.png') no-repeat center;
-		background-size: cover;
-		position: absolute;
-		z-index: 100;
-		min-height: 100vh;
-		max-height: 100vh;
-		width: 100%;
-	}
-	.vidarcM {
-		zoom: 170%;
-		max-height: 100vh;
-		overflow: hidden;
-
-		
-	}
-	.vidarcM video{
-		top:-35% !important;
-	}
-	.vidarcM .bannerarcdiv{
-		top:-35% !important;
-	}
-	.welcome{
-		padding-top: 25vh !important;
-	}
+			background: url('/images/arc_banner_mobile.png') no-repeat center;
+			background-size: cover;
+			position: absolute;
+			z-index: 100;
+			min-height: 100vh;
+			max-height: 100vh;
+			width: 100%;
+		}
+		.vidarcM {
+			zoom: 170%;
+			max-height: 100vh;
+			overflow: hidden;
+		}
+		.vidarcM video {
+			top: -35% !important;
+		}
+		.vidarcM .bannerarcdiv {
+			top: -35% !important;
+		}
+		.welcome {
+			padding-top: 25vh !important;
+		}
 	}
 	@media screen and (max-width: 600px) and (min-height: 700px) {
 		.vidarcM {
-		zoom: 150%;
-		max-height: 100vh;
-		overflow: hidden;
-
-		
-	}
-	.vidarcM video{
-		top:-25% !important;
-	}
-	.vidarcM .bannerarcdiv{
-		top:-25% !important;
-	}
-
+			zoom: 150%;
+			max-height: 100vh;
+			overflow: hidden;
+		}
+		.vidarcM video {
+			top: -25% !important;
+		}
+		.vidarcM .bannerarcdiv {
+			top: -25% !important;
+		}
 	}
 </style>

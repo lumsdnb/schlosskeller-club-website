@@ -310,7 +310,6 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: relative;
-		scroll-snap-stop: normal !important;
 		scroll-snap-align: start;
 	}
 

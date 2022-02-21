@@ -121,8 +121,8 @@
 			</h2>
 			<p>
 				{$language.englishSelected
-					? 'We will meet in VRChat. A headset is not required, but makes the experience much more immersive.'
-					: 'Wir treffen uns in VRChat. Ein VR Headset ist nicht notwendig, macht das Erlebnis aber immersiver.'}
+					? 'We will meet in VRChat on March 5th at 8PM. A headset is not required, but makes the experience much more immersive.'
+					: 'Wir treffen uns am 5. März um 8 Uhr in VRChat. Ein Headset ist nicht notwendig, macht das Erlebnis aber immersiver.'}
 			</p>
 			<br />
 			<div class="button-container">

@@ -143,7 +143,7 @@
 							target="_blank"
 							>{$language.englishSelected
 								? 'send us a friend request'
-								: 'Kellerkind als Freund hinzufügen'}</a
+								: 'lumsdnb als Freund hinzufügen'}</a
 						>
 					</p>
 				</div>

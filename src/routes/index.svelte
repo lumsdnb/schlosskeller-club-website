@@ -31,7 +31,7 @@
 					<iframe
 						title="twitchStream"
 						style="z-index:99999;height:50%;width:90%;"
-						src="https://player.twitch.tv/?channel=schlosskeller_darmstadt&parent=schlosskeller.club"
+						src="https://player.twitch.tv/?channel=schlosskeller&parent=schlosskeller.club"
 						frameborder="0"
 						allowfullscreen="true"
 						scrolling="no"
@@ -39,7 +39,7 @@
 					<iframe
 					title="twitchChat"
 						style="z-index:99999;height:30%;width:90%;"
-						src="https://twitch.tv/embed/schlosskeller_darmstadt/chat?parent=schlosskeller.club"
+						src="https://twitch.tv/embed/schlosskeller/chat?parent=schlosskeller.club"
 					/>
 				</div>
 			{/if}
@@ -52,7 +52,7 @@
 					<iframe
 						title="twitchStream"
 						style="z-index:99999;height:80%;width:60%;"
-						src="https://player.twitch.tv/?channel=schlosskeller_darmstadt&parent=schlosskeller.club"
+						src="https://player.twitch.tv/?channel=schlosskeller&parent=schlosskeller.club"
 						frameborder="0"
 						allowfullscreen="true"
 						scrolling="no"
@@ -60,7 +60,7 @@
 					<iframe
 						title="twitchChat"
 						style="z-index:99999;height:80%;width:25%;"
-						src="https://twitch.tv/embed/schlosskeller_darmstadt/chat?parent=schlosskeller.club"
+						src="https://twitch.tv/embed/schlosskeller/chat?parent=schlosskeller.club"
 					/>
 				</div>
 			{/if}

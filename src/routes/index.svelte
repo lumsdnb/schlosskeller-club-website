@@ -22,74 +22,49 @@
 
 <div class="scrollContainer">
 	<section id="schlosskellerplus">
-		<div class="vidarcM">
-			<MediaQuery query="(max-width: 600px)" let:matches>
-				{#if matches}
-					<CheckIos let:matches>
-						{#if matches}
-							<img
-								id="myVideo"
-								alt=""
-								autoplay
-								loop
-								muted
-								playsinline
-								src="\video\banner_video_iphone.mp4"
-							/>
-						{/if}
-					</CheckIos>
-					<CheckIos let:matches>
-						{#if !matches}
-							<video autoplay muted loop id="myVideo">
-								<source src="\video\banner_video_mobile.mp4" type="video/mp4" />
-								<source src="\video\banner_video_mobile.webm" type="video/webm" />
-							</video>
-						{/if}
-					</CheckIos>
-				{/if}
-			</MediaQuery>
-			<MediaQuery query="(min-width: 621px)" let:matches>
-				{#if matches}
-					<video autoplay muted loop id="myVideo">
-						<source src="\video\banner_video.mp4" type="video/mp4" />
-						<source src="\video\banner_video.webm" type="video/webm" />
-					</video>
-				{/if}
-			</MediaQuery>
-			<CheckIos let:matches>
-				{#if !matches}
-					<div class="bannerarcdiv" />
-				{/if}
-			</CheckIos>
-		</div>
-		<div
-			class="welcome"
-			style="font-size: {outerWidth > outerHeight
-				? 'calc(16 * 100vw/1/1024)'
-				: 'calc(18px + 100vw/1/1920)'};"
-		>
-			<img
-				src="images/skplus.png"
-				style="height: {outerWidth > outerHeight
-					? 'calc(24 * 100vw/1/1024)'
-					: 'calc(28px + 100vw/1/1920)'};"
-				id="skplus"
-				alt=""
-				srcset=""
-			/>
-			<p class="pb-5">
-				MARCH 5th 2022 <br />
-				20 - 03 GMT+1
-			</p>
-
-			music by
-			<ul>
-				<li>CHRIS..............................IMPULS</li>
-				<li>DAVID........SOULFOOD CLUB</li>
-				<li>LAVDIM........LOSTBAHNHOF</li>
-				<li>MARIAN..................BOHEMICA</li>
-			</ul>
-		</div>
+		<img style="position:absolute;height:6%;top:2%;" src="/images/skplus.png" />
+		<MediaQuery query="(max-width: 600px)" let:matches>
+			{#if matches}
+				<div
+					style="background:rgba(0,0,0,0.8); height:100vh; width:100%;display:flex; flex-direction:column;align-items:center; justify-content:center"
+				>
+					<iframe
+						title="twitchStream"
+						style="z-index:99999;height:50%;width:90%;"
+						src="https://player.twitch.tv/?channel=schlosskeller_darmstadt&parent=localhost"
+						frameborder="0"
+						allowfullscreen="true"
+						scrolling="no"
+					/>
+					<iframe
+					title="twitchChat"
+						style="z-index:99999;height:30%;width:90%;"
+						src="https://twitch.tv/embed/schlosskeller_darmstadt/chat?parent=localhost"
+					/>
+				</div>
+			{/if}
+		</MediaQuery>
+		<MediaQuery query="(min-width: 631px)" let:matches>
+			{#if matches}
+				<div
+					style="background:rgba(0,0,0,0.8); height:100vh; width:100%;display:flex; flex-direction:row;align-items:center; justify-content:center"
+				>
+					<iframe
+						title="twitchStream"
+						style="z-index:99999;height:80%;width:60%;"
+						src="https://player.twitch.tv/?channel=schlosskeller_darmstadt&parent=localhost"
+						frameborder="0"
+						allowfullscreen="true"
+						scrolling="no"
+					/>
+					<iframe
+						title="twitchChat"
+						style="z-index:99999;height:80%;width:25%;"
+						src="https://twitch.tv/embed/schlosskeller_darmstadt/chat?parent=localhost"
+					/>
+				</div>
+			{/if}
+		</MediaQuery>
 	</section>
 
 	<section>

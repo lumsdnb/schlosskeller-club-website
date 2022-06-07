@@ -96,8 +96,8 @@
 			</h2>
 			<p>
 				{$language.englishSelected
-					? 'We will meet in VRChat on March 5th at 8PM. A headset is not required, but makes the experience much more immersive.'
-					: 'Wir treffen uns am 5. März um 8 Uhr in VRChat. Ein Headset ist nicht notwendig, macht das Erlebnis aber immersiver.'}
+					? 'We will meet in VRChat on June 15th at 4PM GMT+1. A headset is not required, but makes the experience much more immersive.'
+					: 'Wir treffen uns am 15. Juni um 16 Uhr in VRChat. Ein Headset ist nicht notwendig, macht das Erlebnis aber immersiver.'}
 			</p>
 			<br />
 			<div class="button-container">
@@ -117,18 +117,18 @@
 							href="https://vrchat.com/home/user/usr_933c3cf3-6f8a-44f5-8a87-0f582220a124"
 							target="_blank"
 							>{$language.englishSelected
-								? 'send us a friend request'
+								? 'Add lumsdnb as a friend'
 								: 'lumsdnb als Freund hinzufügen'}</a
 						>
 					</p>
 				</div>
 				<div>
 					<span class="button-container__counter">3.</span>
-					<img class="w-14" src="images/invite-icon.png" alt="VrChat invitation icon" srcset="" />
+					<img class="w-14" src="images/orb.png" alt="VrChat invitation icon" srcset="" />
 					<p>
 						{$language.englishSelected
-							? 'You will receive an invite once the event begins'
-							: 'Du bekommst zu Beginn der Veranstaltung eine Einladung'}
+							? 'Once our status turns blue, you will be able to join the party!'
+							: 'Sobald unser Status blau wird, ist die Party eröffnet!'}
 					</p>
 				</div>
 			</div>

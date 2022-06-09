@@ -22,49 +22,7 @@
 
 <div class="scrollContainer">
 	<section id="schlosskellerplus">
-		<img style="position:absolute;height:6%;top:2%;" src="/images/skplus.png" />
-		<MediaQuery query="(max-width: 600px)" let:matches>
-			{#if matches}
-				<div
-					style="background:rgba(0,0,0,0.8); height:100vh; width:100%;display:flex; flex-direction:column;align-items:center; justify-content:center"
-				>
-					<iframe
-						title="twitchStream"
-						style="z-index:99999;height:50%;width:90%;"
-						src="https://player.twitch.tv/?channel=schlosskeller&parent=schlosskeller.club"
-						frameborder="0"
-						allowfullscreen="true"
-						scrolling="no"
-					/>
-					<iframe
-					title="twitchChat"
-						style="z-index:99999;height:30%;width:90%;"
-						src="https://twitch.tv/embed/schlosskeller/chat?parent=schlosskeller.club"
-					/>
-				</div>
-			{/if}
-		</MediaQuery>
-		<MediaQuery query="(min-width: 631px)" let:matches>
-			{#if matches}
-				<div
-					style="background:rgba(0,0,0,0.8); height:100vh; width:100%;display:flex; flex-direction:row;align-items:center; justify-content:center"
-				>
-					<iframe
-						title="twitchStream"
-						style="z-index:99999;height:80%;width:60%;"
-						src="https://player.twitch.tv/?channel=schlosskeller&parent=schlosskeller.club"
-						frameborder="0"
-						allowfullscreen="true"
-						scrolling="no"
-					/>
-					<iframe
-						title="twitchChat"
-						style="z-index:99999;height:80%;width:25%;"
-						src="https://twitch.tv/embed/schlosskeller/chat?parent=schlosskeller.club"
-					/>
-				</div>
-			{/if}
-		</MediaQuery>
+		<img src="/images/museumsposter.webp">
 	</section>
 
 	<section>
@@ -96,8 +54,8 @@
 			</h2>
 			<p>
 				{$language.englishSelected
-					? 'We will meet in VRChat on June 15th at 4PM GMT+1. A headset is not required, but makes the experience much more immersive.'
-					: 'Wir treffen uns am 15. Juni um 16 Uhr in VRChat. Ein Headset ist nicht notwendig, macht das Erlebnis aber immersiver.'}
+					? 'We will meet in VRChat on June 15th at 7PM GMT+1. A headset is not required, but makes the experience much more immersive.'
+					: 'Wir treffen uns am 15. Juni um 19 Uhr in VRChat. Ein Headset ist nicht notwendig, macht das Erlebnis aber immersiver.'}
 			</p>
 			<br />
 			<div class="button-container">
@@ -296,7 +254,7 @@
 
 	.slide-content {
 		max-width: 90vw;
-		filter: drop-shadow(3px 3px 2px black);
+		filter: drop-shadow(3px 5px 1px black);
 	}
 
 	.side-header {
@@ -324,13 +282,8 @@
 	}
 
 	section:nth-child(1) {
-		background: linear-gradient(
-			180deg,
-			var(--primary-color) 0%,
-			var(--secondary-color) 10.45%,
-			var(--tertiary-color) 51.35%,
-			var(--primary-color) 81.35%
-		);
+		background-color: #64ad87;
+		background-size: contain;
 		max-height: 100vh;
 		z-index: 100;
 		position: relative;
